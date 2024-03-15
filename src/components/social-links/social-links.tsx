@@ -4,29 +4,30 @@ import {
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
 import * as Separator from "@radix-ui/react-separator";
+import { separatorRoot } from "./social-link.css";
 
-const SocialLinks = () => (
-  <div>
+const SocialLinks = (props: {[x: string]: string}) => (
+  <div className={props.marginClass} >
     <a href="#">
-      <LinkedInLogoIcon />
+      <LinkedInLogoIcon className={props.iconImages}  />
     </a>
     <Separator.Root
-      className="SeparatorRoot"
+      className={`${separatorRoot} ${props.separatorClass}`}
       decorative
       orientation="vertical"
       style={{ margin: "0 15px" }}
     />
     <a href="#">
-      <GitHubLogoIcon />
+      <GitHubLogoIcon className={props.iconImages}/>
     </a>
     <Separator.Root
-      className="SeparatorRoot"
+      className={separatorRoot}
       decorative
       orientation="vertical"
       style={{ margin: "0 15px" }}
     />
     <a href="#">
-      <InstagramLogoIcon />
+      <InstagramLogoIcon className={props.iconImages}/>
     </a>
   </div>
 );

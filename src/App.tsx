@@ -1,12 +1,12 @@
 import './App.css'
-import CollapsibleSideMenu from './features/side-menu/side-menu'
+import Menu from './features/menu/menu'
 
 function App() {
 
   return (
     <>
       <div>
-        <CollapsibleSideMenu/>
+        <Menu />
       </div>
     </>
   )
