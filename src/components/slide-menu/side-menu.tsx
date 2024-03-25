@@ -58,14 +58,13 @@ export interface SideMenuProps {
 }
 
 const CollapsibleSideMenu = (props: SideMenuProps) => {
-  
   return (
     <Collapsible.Root
       className={collapsibleRoot}
       open={props.open}
-      onOpenChange={props.setOpen}
+      onOpenChange={props.setOpen}      
     >
-      <Collapsible.Content className={collapsibleContent}>
+      <Collapsible.Content className={collapsibleContent} forceMount>
         <RoundAvatar avatarSize={avatarSize} />
         <div className={userName}>
           <span>Anup Singh</span>

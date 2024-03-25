@@ -2,7 +2,6 @@
 import * as Collapsible from "@radix-ui/react-collapsible";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import {
-  Cross2Icon,
   HomeIcon,
   PersonIcon,
   FileIcon,
@@ -19,7 +18,6 @@ import {
   avatarSize,
   collapsibleContent,
   collapsibleRoot,
-  iconButton,
   iconImages,
   linkData,
   linkText,
@@ -30,10 +28,12 @@ import {
   navigationLinks,
   //separatorRoot,
   socialMargins,
+  stickyMenuContainer,
   userInfoContent,
   //triggerAvatarSize,
   userName,
 } from "./top-menu.css";
+import { Box } from "../box/box";
 //import * as Separator from "@radix-ui/react-separator";
 
 const Link = ({ ...props }) => (
@@ -69,79 +69,67 @@ const CollapsibleTopMenu = (props: TopMenuProps) => {
   }
 
   return (
-    <>
-    <Collapsible.Root
-      className={collapsibleRoot}
-      open={props.open}
-      onOpenChange={props.setOpen}
-    >
-      <Collapsible.Content className={collapsibleContent}>
-        <div className={avatarContainer}>
-          
-        </div>
-        <div className={menuContent}>
-          <div className={userInfoContent}>
-            <div className={userName}>
-              <span>Anup Singh</span>
-            </div>
-            <SocialLinks marginClass={socialMargins} iconImages={iconImages} />
-          </div>
-          <div className={navigationLinks}>
-            <NavigationMenu.Root orientation="horizontal">
-              <NavigationMenu.List className={menuList}>
-                <NavigationMenu.Item className={menuItem}>
-                  <Link href="/" name="Home">
-                    <HomeIcon className={navIconImages} />
-                  </Link>
-                </NavigationMenu.Item>
-                <NavigationMenu.Item className={menuItem}>
-                  <Link href="/" name="About">
-                    <PersonIcon className={navIconImages} />
-                  </Link>
-                </NavigationMenu.Item>
-                <NavigationMenu.Item className={menuItem}>
-                  <Link href="/" name="Resume">
-                    <FileIcon className={navIconImages} />
-                  </Link>
-                </NavigationMenu.Item>
-                <NavigationMenu.Item className={menuItem}>
-                  <Link href="/" name="Portfolio">
-                    <ReaderIcon className={navIconImages} />
-                  </Link>
-                </NavigationMenu.Item>
-                <NavigationMenu.Item className={menuItem}>
-                  <Link href="/" name="Projects">
-                    <ArchiveIcon className={navIconImages} />
-                  </Link>
-                </NavigationMenu.Item>
-                <NavigationMenu.Item className={menuItem}>
-                  <Link href="/" name="Self Initiatives">
-                    <RocketIcon className={navIconImages} />
-                  </Link>
-                </NavigationMenu.Item>
-              </NavigationMenu.List>
-            </NavigationMenu.Root>
-          </div>
-        </div>
-      </Collapsible.Content>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
+    <div className={stickyMenuContainer}>      
+      <button onClick={closeTrigger} className={avatarButton}>
+      <RoundAvatar avatarSize={avatarSize} />
+      </button>
+      <Collapsible.Root
+        className={collapsibleRoot}
+        open={props.open}
+        onOpenChange={props.setOpen}
       >
-        <Collapsible.Trigger asChild>
-          <button className={iconButton}>
-            {props.open ? <Cross2Icon /> : ""}
-          </button>
-        </Collapsible.Trigger>
+        <Collapsible.Content className={collapsibleContent}>
+          <div className={menuContent}>
+          <div className={avatarContainer}></div>
+            <div className={userInfoContent}>
+              <div className={userName}>
+                <span>Anup Singh</span>
+              </div>
+              <SocialLinks
+                marginClass={socialMargins}
+                iconImages={iconImages}
+              />
+            </div>
+            <div className={navigationLinks}>
+              <NavigationMenu.Root orientation="horizontal">
+                <NavigationMenu.List className={menuList}>
+                  <NavigationMenu.Item className={menuItem}>
+                    <Link href="/" name="Home">
+                      <HomeIcon className={navIconImages} />
+                    </Link>
+                  </NavigationMenu.Item>
+                  <NavigationMenu.Item className={menuItem}>
+                    <Link href="/" name="About">
+                      <PersonIcon className={navIconImages} />
+                    </Link>
+                  </NavigationMenu.Item>
+                  <NavigationMenu.Item className={menuItem}>
+                    <Link href="/" name="Resume">
+                      <FileIcon className={navIconImages} />
+                    </Link>
+                  </NavigationMenu.Item>
+                  <NavigationMenu.Item className={menuItem}>
+                    <Link href="/" name="Portfolio">
+                      <ReaderIcon className={navIconImages} />
+                    </Link>
+                  </NavigationMenu.Item>
+                  <NavigationMenu.Item className={menuItem}>
+                    <Link href="/" name="Projects">
+                      <ArchiveIcon className={navIconImages} />
+                    </Link>
+                  </NavigationMenu.Item>
+                  <NavigationMenu.Item className={menuItem}>
+                    <Link href="/" name="Self Initiatives">
+                      <RocketIcon className={navIconImages} />
+                    </Link>
+                  </NavigationMenu.Item>
+                </NavigationMenu.List>
+              </NavigationMenu.Root>
+            </div>
+          </div>
+        </Collapsible.Content>
+      </Collapsible.Root>
       </div>
-    </Collapsible.Root>
-    <button onClick={closeTrigger} className={avatarButton}>
-    <RoundAvatar avatarSize={avatarSize} />
-    </button>
-    </>
   );
 };
 

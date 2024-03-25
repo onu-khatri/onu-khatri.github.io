@@ -5,7 +5,7 @@ import { keyframes, style } from "@vanilla-extract/css";
 export const fadeInLeftKeyFrame = keyframes({
   "from": {
     opacity: 0,
-    transform: "translate3d(-100%, 0, 0)"
+    transform: "translate3d(0, -100%, 0)"
   },
 
   "to": {
@@ -22,7 +22,7 @@ export const fadeOutLeftKeyFrame = keyframes({
 
   "to": {
     opacity: 0,
-    transform: "translate3d(0, 0, -100%)"
+    transform: "translate3d(0, -100%, 0)"
   }
 });
 
@@ -81,6 +81,22 @@ export const collapsibleRoot = style({
   overflow: 'hidden',
   userSelect: 'none',
   borderRadius: '5%',
+  maxWidth: "max-content",
+  marginLeft: "10px",
+  flex: "1 1 100%",
+  maxHeight: "100vh",
+  position: "sticky",
+  top: "0px",
+
+  selectors: {
+    '&[data-state="closed"]': {
+      animation: `${fadeOutLeftKeyFrame} 1s ease-out`
+    },
+    '&[data-state="open"]': {
+      animation: `${fadeInLeftKeyFrame} 500ms cubic-bezier(0, 0, 0.2, 1);`
+    }
+  }
+
 });
 
 export const collapsibleContent = style({
@@ -90,22 +106,10 @@ export const collapsibleContent = style({
   userSelect: 'none',
   borderRadius: '5%',
   padding: '20px 10px 10px 10px',
-  position: "absolute",
-  top: "10px",
-  left: "11px",
   background: "white",
-  height: "92vh",
+  height: "98.5vh",
   boxShadow: "0 3px 10px white",
   animation: `fadeInLeftKeyFrame 1s ease-in`,
-
-  selectors: {
-    '&[data-state="closed"]': {
-      animation: `fadeInLeftKeyFrame 1s ease-in`
-    },
-    '&[data-state="open"]': {
-      animation: `${fadeInLeftKeyFrame} 1s ease-in`
-    }
-  }
 });
 
 export const iconButton = style({
@@ -118,10 +122,7 @@ export const iconButton = style({
   justifyContent: "center",
   color: violetA.violetA11,
   boxShadow: `0 2px 10px ${blackA.blackA9}`,
-  position: "absolute",
-  top: "13px",
-  left: "15px",
-
+  transform: "translate(5px, -92vh)",
   selectors: {
     '&[data-state="closed"]': {
      display: "none"

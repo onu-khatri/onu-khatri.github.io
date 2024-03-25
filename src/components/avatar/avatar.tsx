@@ -5,7 +5,7 @@ const RoundAvatar = (props: {[x: string]: string}) => (
 <Avatar.Root className={`${avatarRoot} ${props.avatarSize}`}>
             <Avatar.Image
               className={avatarImage}
-              src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
+              src="profile.jpg"
               alt="Anup Singh"
             />
             <Avatar.Fallback className={avatarFallback} delayMs={600}>
