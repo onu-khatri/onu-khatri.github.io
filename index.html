@@ -4,11 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-    <script type="module" crossorigin src="/assets/index-BshuEyeF.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-J722xsR7.css">
+    <link href="/bootstrap.min.css" rel="stylesheet"/>
+    <title>Anup's Portfolio</title>
+    <script type="module" crossorigin src="/assets/index-DIc1mGS2.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CcdnsxKa.css">
   </head>
   <body>
     <div id="root"></div>
+    <div class="blob"></div>
+    <script>
+      var cursor = document.querySelector('.blob');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+    </script>
   </body>
 </html>
