@@ -1,4 +1,4 @@
-import { blackA, violetA } from "@radix-ui/colors";
+import { blackA, violetA, whiteA } from "@radix-ui/colors";
 import { keyframes, style } from "@vanilla-extract/css";
 
 
@@ -37,13 +37,13 @@ export const triggerAvatarSize = style({
 });
 
 export const linkText = style({
-  color: blackA.blackA10,
+  color: whiteA.whiteA10,
   fontSize: "17px"
 });
 
 export const separatorRoot = style({
-  backgroundColor: blackA.blackA3,
-  margin: '15px 0',
+  backgroundColor: whiteA.whiteA12,
+  margin: 'calc(12px + 2vh) 0',
   height: "2px"
 });
 
@@ -72,7 +72,7 @@ export const menuList = style({
 });
 
 export const menuItem = style({
-  paddingBottom: "15px"
+  paddingBottom: "calc(12px + 2vh)"
 });
 
 export const collapsibleRoot = style({
@@ -82,7 +82,7 @@ export const collapsibleRoot = style({
   userSelect: 'none',
   borderRadius: '5%',
   maxWidth: "max-content",
-  marginLeft: "10px",
+  marginLeft: "1px",
   flex: "1 1 100%",
   maxHeight: "100vh",
   position: "sticky",
@@ -106,9 +106,8 @@ export const collapsibleContent = style({
   userSelect: 'none',
   borderRadius: '5%',
   padding: '20px 10px 10px 10px',
-  background: "white",
   height: "98.5vh",
-  boxShadow: "0 3px 10px white",
+  borderRight:"1px dashed #9893f2",
   animation: `fadeInLeftKeyFrame 1s ease-in`,
 });
 
@@ -120,9 +119,12 @@ export const iconButton = style({
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  color: violetA.violetA11,
-  boxShadow: `0 2px 10px ${blackA.blackA9}`,
-  transform: "translate(5px, -92vh)",
+  color: whiteA.whiteA12,
+  boxShadow: `0 2px 10px ${whiteA.whiteA10}`,
+  position: "absolute",
+  top: "3px",
+  left: "3px",
+
   selectors: {
     '&[data-state="closed"]': {
      display: "none"
@@ -142,10 +144,10 @@ export const iconButton = style({
 });
 
 export const userName = style({
-  color: "black",
+  color: whiteA.whiteA12,
   fontSize: "26px",
   fontFamily: "serif",
-  margin: "6px",
+  padding: "12px 0",
   fontWeight: "600",
   letterSpacing: "1px",
   wordSpacing: "2px"

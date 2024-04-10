@@ -26,6 +26,7 @@ import {
   menuList,
   navIconImages,
   navigationLinks,
+  separatorRoot,
   //separatorRoot,
   socialMargins,
   stickyMenuContainer,
@@ -33,8 +34,6 @@ import {
   //triggerAvatarSize,
   userName,
 } from "./top-menu.css";
-import { Box } from "../box/box";
-//import * as Separator from "@radix-ui/react-separator";
 
 const Link = ({ ...props }) => (
   <NavigationMenu.Link asChild>
@@ -87,6 +86,7 @@ const CollapsibleTopMenu = (props: TopMenuProps) => {
               </div>
               <SocialLinks
                 marginClass={socialMargins}
+                separatorClass = {separatorRoot}
                 iconImages={iconImages}
               />
             </div>
@@ -104,7 +104,7 @@ const CollapsibleTopMenu = (props: TopMenuProps) => {
                     </Link>
                   </NavigationMenu.Item>
                   <NavigationMenu.Item className={menuItem}>
-                    <Link href="/" name="Resume">
+                    <Link href="/" name="Experience">
                       <FileIcon className={navIconImages} />
                     </Link>
                   </NavigationMenu.Item>

@@ -1,24 +1,13 @@
-import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
-import { unresponsiveProperties } from './unresponsive-properties';
+import type { ConditionalValue } from '@vanilla-extract/sprinkles';
+import {
+  defineProperties,
+  createSprinkles,
+  createMapValueFn,
+} from '@vanilla-extract/sprinkles';
+
+import { responsiveProperties } from './responsive-properties';
 import { breakpointNames, breakpoints } from './breakpoint';
-import { pseudoProperties, responsiveProperties } from './responsive-properties';
-
-const unresponsiveAtomicProperties = defineProperties({
-  properties: unresponsiveProperties,
-  shorthands: {
-    inset: ['top', 'bottom', 'left', 'right'],
-  },
-});
-
-const pseudoAtomicProperties = defineProperties({
-  defaultCondition: false,
-  conditions: {
-    active: {
-      selector: '&:active',
-    },
-  },
-  properties: pseudoProperties,
-});
+import { vars } from './theme.css';
 
 const responsiveAtomicProperties = defineProperties({
   defaultCondition: 'mobile',
@@ -46,8 +35,45 @@ const responsiveAtomicProperties = defineProperties({
   },
 });
 
+
+export type ResponsiveValue<Value extends string | number> = ConditionalValue<
+  typeof responsiveAtomicProperties,
+  Value
+>;
+export const mapResponsiveValue = createMapValueFn(responsiveAtomicProperties);
+
+const colorProperties = defineProperties({
+  properties: {
+    color: vars.colors,
+    background: vars.colors,
+    borderColor: vars.colors,
+  },
+});
+
+const unconditionalProperties = defineProperties({
+  properties: {
+    flexWrap: ['wrap', 'nowrap'],
+    top: [0],
+    bottom: [0],
+    left: [0],
+    right: [0],
+    zIndex: [-1, 0, 1],
+    width: vars.sizes,
+    height: vars.sizes,
+    borderRadius: vars.radii,
+    cursor: ['pointer'],
+    textDecoration: ['none', 'underline', 'line-through'],
+    textTransform: ['uppercase', 'lowercase', 'capitalize'],
+    textAlign: ['left', 'center', 'right'],
+    textOverflow: ['ellipsis'],
+    overflow: ['hidden'],
+    whiteSpace: ['nowrap'],
+    boxShadow: vars.shadows,
+  },
+});
+
 export const sprinkles = createSprinkles(
-  unresponsiveAtomicProperties,
   responsiveAtomicProperties,
-  pseudoAtomicProperties
+  colorProperties,
+  unconditionalProperties
 );

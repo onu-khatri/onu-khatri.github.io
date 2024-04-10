@@ -21,7 +21,7 @@ const SocialLinks = (props: {[x: string]: string}) => (
       <GitHubLogoIcon className={props.iconImages}/>
     </a>
     <Separator.Root
-      className={separatorRoot}
+      className={`${separatorRoot} ${props.separatorClass}`}
       decorative
       orientation="vertical"
       style={{ margin: "0 15px" }}

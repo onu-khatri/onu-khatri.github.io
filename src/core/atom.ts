@@ -1,23 +1,23 @@
 import clsx from "clsx";
-import { baseReset, elementResets } from "./reset.css";
 import { sprinkles } from "./sprinkles.css";
 import { omit, pick } from "lodash";
+import { base, element } from "./reset.css";
 
 export type Sprinkles = Parameters<typeof sprinkles>[0];
 
 export interface Atoms extends Sprinkles {
-  reset?: keyof JSX.IntrinsicElements;
+  reset?: boolean | keyof JSX.IntrinsicElements | undefined;
   className?: string | string[];
 }
 
-export function atoms(atoms: Atoms) {
+export function atoms(atoms: Atoms) {    
   const { reset, className, ...rest } = atoms;
   const sprinklesClassNames = sprinkles(rest);
 
   return clsx(
+    reset ? [base, element[reset as keyof JSX.IntrinsicElements]] : null,
     sprinklesClassNames,
-    className,
-    reset ? [baseReset, elementResets[reset]] : null
+    className
   );
 }
 

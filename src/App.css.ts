@@ -1,6 +1,4 @@
 import { style } from "@vanilla-extract/css";
-import { wrap } from "lodash";
-
 
 export const baseGrid = style({
   display: "flex",

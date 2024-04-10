@@ -85,7 +85,7 @@ const CollapsibleSideMenu = (props: SideMenuProps) => {
                 </Link>
               </NavigationMenu.Item>
               <NavigationMenu.Item className={menuItem}>
-                <Link href="/" name="Resume">
+                <Link href="/" name="Experience">
                   <FileIcon className={navIconImages} />
                 </Link>
               </NavigationMenu.Item>

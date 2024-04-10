@@ -78,6 +78,6 @@ export const shadowEffect = style({
     "-webkit-text-fill-color": "transparent",
       animation: `${shadAnim} 15s linear infinite`,
       lineHeight: "calc(62px + 3vw)"
-    }
+    } as React.CSSProperties
   }
 });

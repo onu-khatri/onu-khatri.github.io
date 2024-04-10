@@ -23,13 +23,17 @@ const scaleMap = (limit: number, includeReverse: boolean, respectZero: boolean, 
     const reduce = includeReverse && filter + zeroOrOne > limit ? (filter - limit + zeroOrOne) * -1 : filter + zeroOrOne;
     result[reduce + 'x'] = reduce < 0 ? `calc(${func(Math.abs(reduce))}*-1)` : func(reduce);
     return result;
-  }, {} as { [x: string]: string })
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  }, {} as {[x: string]:string})
 )
+
+const widths = scaleMap(11, false, true, lineHeightScale);
+widths["full"] = "100%";
 
 export const vars = createGlobalTheme(':root', {
   space: scaleMap(11, true, false, spaceScale),
   height: scaleMap(11, false, false, heightPercentage),
-  width: {...scaleMap(11, false, false, widthPercentage), 'full' : '100%'},
+  width: scaleMap(11, false, false, widthPercentage),
   lineHeight: scaleMap(11, false, true, lineHeightScale),
   color: {
     core10: '#F7F3F6',

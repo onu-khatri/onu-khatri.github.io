@@ -39,3 +39,7 @@ export const imagesStyle = style({
     }
   }
 });
+
+export const intoPara = style({
+  margin: "calc(1em + .5vh) 0"
+})

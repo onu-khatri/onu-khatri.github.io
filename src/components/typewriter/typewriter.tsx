@@ -27,15 +27,15 @@ export class Typewriter extends Component {
     this.staticElementRef = React.createRef();
 }
 
-get cursorElement() : HTMLElement {
+get cursorElement() : HTMLElement | null {
   return this.cursorRef.current;
 }
 
-get typeAreaElement() : HTMLElement {
+get typeAreaElement() : HTMLElement | null {
   return this.typeAreaRef.current;
 }
 
-get staticElement() : HTMLElement {
+get staticElement() : HTMLElement| null {
   return this.staticElementRef.current;
 }
 
@@ -45,6 +45,9 @@ componentDidMount(): void {
 }
 
 typeData() {
+  if(!this.cursorElement || !this.staticElement || !this.typeAreaElement)
+    return;
+
   if (this.charIndex < this.props.dynamicValues[this.textArrayIndex].typeText.length) {
     if(!this.cursorElement.classList.contains("typing")) 
       this.cursorElement.classList.add("typing");
@@ -62,6 +65,9 @@ typeData() {
 }
 
 erase() {
+  if(!this.cursorElement || !this.staticElement || !this.typeAreaElement)
+    return;
+  
 	if (this.charIndex > 0) {
     if(!this.cursorElement.classList.contains("typing")) this.cursorElement.classList.add("typing");
     this.typeAreaElement.textContent = this.props.dynamicValues[this.textArrayIndex].typeText.substring(0, this.charIndex-1);

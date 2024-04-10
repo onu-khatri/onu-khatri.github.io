@@ -5,11 +5,11 @@ const RoundAvatar = (props: {[x: string]: string}) => (
 <Avatar.Root className={`${avatarRoot} ${props.avatarSize}`}>
             <Avatar.Image
               className={avatarImage}
-              src="profile.jpg"
-              alt="Anup Singh"
+              src= {props.src}//"profile.jpg"
+              alt= {props.alt} //"Anup Singh"
             />
             <Avatar.Fallback className={avatarFallback} delayMs={600}>
-              Anup Singh
+              {props.alt}
             </Avatar.Fallback>
           </Avatar.Root>
 );

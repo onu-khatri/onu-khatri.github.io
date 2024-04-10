@@ -3,6 +3,7 @@ import { Box } from "../../components/box/box";
 import {
   aboutInfo,
   imagesStyle,
+  intoPara,
   IntroContainer,
   toolKitList,
   toolKitListItem,
@@ -11,27 +12,34 @@ import {
 
 export const Introduction = () => (
   <Box className={`row  ${IntroContainer}`} as="article" reset={false}>
-    <Box className={`col-md-6 ${aboutInfo}`} color="core10">
+    <Box className={`col-md-6 ${aboutInfo}`}>
+      <>
       <h2>About Me:</h2>
-      <p style={{margin:"2vw 0"}}>
+      <p className={intoPara}>
         A Full-Stack web developer and designer (sometimes) with 12 years
         commercial experience creating successful websites with engaging,
         meaningful user experiences.
       </p>
-      <p style={{margin:"2vw 0"}}>
+      <p className={intoPara}>
         As a full-stack developer, I am well-versed in .NET Core and
         NodeJS for back-end support. Also, works on Javascript and its
         frameworks such as Angular and React js. I am able to take ideas from conception to
         completion, handling the entire process from start to finish.
       </p>
-      <p style={{margin:"2vw 0"}}>
+      <p className={intoPara}>
         In addition to office projects, I am also developing repositories on github. 
         I created them for my-own learning and some of them are production-ready, now. Feel free to visit my <a href="https://github.com/onu-khatri">GitHub account <GitHubLogoIcon/></a>
       </p>
-      <p style={{margin:"2vw 0"}}>
+      <p className={intoPara}>
         Other than coding, I spend my free time drawing sketches or playing
         old-school video games. 🤓 I also love to read books and meditate!
       </p>
+      <p>
+        Whether you're a business owner looking to get started on a app or web development project with a freelance web developer, 
+        a developer looking to collaborate on something cool, or just wanting to say hi, shoot me a message and let's work together.
+      </p>
+      <p>For more details on this part of my experience, see my CV.</p>
+      </>
     </Box>
     <Box className="col-md-6">
       <h2 style={{marginLeft: "2vw"}}>

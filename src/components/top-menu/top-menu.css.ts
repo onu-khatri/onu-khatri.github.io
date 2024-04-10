@@ -1,4 +1,4 @@
-import { blackA, violetA, whiteA } from "@radix-ui/colors";
+import { violetA, whiteA } from "@radix-ui/colors";
 import { keyframes, style } from "@vanilla-extract/css";
 
 export const fadeInLeftKeyFrame = keyframes({
@@ -71,13 +71,11 @@ export const triggerAvatarSize = style({
 
 export const linkText = style({
   color: whiteA.whiteA10,
-  fontSize: "16px"
+  fontSize: "14px"
 });
 
 export const separatorRoot = style({
-  backgroundColor: blackA.blackA3,
-  margin: '15px 0',
-  height: "2px"
+  backgroundColor: whiteA.whiteA10
 });
 
 export const linkData = style({
@@ -91,8 +89,8 @@ export const iconImages = style({
 });
 
 export const navIconImages = style({
-  width: "22px",
-  height: "22px"
+  width: "20px",
+  height: "20px"
 });
 
 export const socialMargins = style({
@@ -108,7 +106,8 @@ export const menuList = style({
   listStyle: "none",
   justifyContent: "center",
   flexWrap: "wrap",
-  margin: "0"
+  margin: "0",
+  lineHeight: "24px"
 });
 
 export const menuItem = style({
@@ -148,10 +147,9 @@ export const collapsibleContent = style({
   justifyContent: 'center',
   overflow: 'hidden',
   userSelect: 'none',
-  borderRadius: '5%',
   padding: '5px 5px 5px 10px',
-  background: "#242424",
-  boxShadow: "0 3px 10px #161515"
+  background: "black",
+  borderBottom: "2px dotted #303030"
 });
 
 export const iconButton = style({
@@ -186,7 +184,7 @@ export const iconButton = style({
 
 export const userName = style({
   color: whiteA.whiteA10,
-  fontSize: "22px",
+  fontSize: "20px",
   fontFamily: "serif",
   fontWeight: "600",
   letterSpacing: "1px",
