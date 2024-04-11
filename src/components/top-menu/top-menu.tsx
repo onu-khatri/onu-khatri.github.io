@@ -70,7 +70,7 @@ const CollapsibleTopMenu = (props: TopMenuProps) => {
   return (
     <div className={stickyMenuContainer}>      
       <button onClick={closeTrigger} className={avatarButton}>
-      <RoundAvatar avatarSize={avatarSize} />
+      <RoundAvatar avatarSize={avatarSize} src="profile.jpg" alt="Anup Singh"/>
       </button>
       <Collapsible.Root
         className={collapsibleRoot}

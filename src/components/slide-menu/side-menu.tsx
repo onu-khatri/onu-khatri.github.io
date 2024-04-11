@@ -65,7 +65,7 @@ const CollapsibleSideMenu = (props: SideMenuProps) => {
       onOpenChange={props.setOpen}      
     >
       <Collapsible.Content className={collapsibleContent} forceMount>
-        <RoundAvatar avatarSize={avatarSize} />
+        <RoundAvatar avatarSize={avatarSize} src="profile.jpg" alt="Anup Singh"/>
         <div className={userName}>
           <span>Anup Singh</span>
         </div>

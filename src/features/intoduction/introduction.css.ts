@@ -1,7 +1,8 @@
+import { whiteA } from "@radix-ui/colors";
 import { style } from "@vanilla-extract/css";
 
 export const IntroContainer = style({
-  color: "white"
+  color: whiteA.whiteA10
 });
 
 export const toolTitle = style({
@@ -27,8 +28,7 @@ export const toolKitListItem = style({
   listStyle: "none",
   display: "flex",
   flexDirection: "column",
-  columnGap:"5px",
-  color: "white"
+  columnGap:"5px"
 });
 
 export const imagesStyle = style({ 
