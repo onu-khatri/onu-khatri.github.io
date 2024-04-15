@@ -8,9 +8,13 @@ export const avatarRoot = style({
   verticalAlign: 'middle',
   overflow: 'hidden',
   userSelect: 'none',
-  borderRadius: '100%',
+  borderRadius: '5%',
   backgroundColor: blackA.blackA3,
   border: "gray 4px solid"
+});
+
+export const avatarRound = style({
+  borderRadius: '100%'
 });
 
 export const avatarImage = style({

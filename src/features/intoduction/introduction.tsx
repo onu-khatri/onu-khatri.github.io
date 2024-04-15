@@ -10,10 +10,11 @@ import {
   toolTitle,
 } from "./introduction.css";
 
-export const Introduction = () => (
-  <Box className={`row  ${IntroContainer}`} as="article" reset={false}>
-    <Box className={`col-md-6 ${aboutInfo}`}>
-      <>
+export const Introduction = () => {
+
+  
+  return <Box className={`row  ${IntroContainer}`} as="article" reset={false}>
+    <Box className={`col-md-6 ${aboutInfo}`}>      
       <h2>About Me:</h2>
       <p className={intoPara}>
         A Full-Stack web developer and designer (sometimes) with 12 years
@@ -39,7 +40,7 @@ export const Introduction = () => (
         a developer looking to collaborate on something cool, or just wanting to say hi, shoot me a message and let's work together.
       </p>
       <p>For more details on this part of my experience, see my CV.</p>
-      </>
+      
     </Box>
     <Box className="col-md-6">
       <h2 style={{marginLeft: "2vw"}}>
@@ -187,4 +188,4 @@ export const Introduction = () => (
       </ul>
     </Box>
   </Box>
-);
+};

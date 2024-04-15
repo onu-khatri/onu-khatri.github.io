@@ -1,5 +1,5 @@
 import { PropsWithChildren, ReactNode } from "react";
-import RoundAvatar from "../../avatar/avatar";
+import AvatarImage from "../../avatar/avatar";
 import React from "react";
 import { IconStyle as iconStyle, labelStyle, timeLineItemStyle } from "./time-line-item.css";
 
@@ -15,7 +15,7 @@ const TimeLineItem = (props: timeLineItemProp) => {
 
   React.Children.forEach(props.children, (child) => {
     if (!React.isValidElement(child)) return;
-    if (child.type === RoundAvatar) {
+    if (child.type === AvatarImage) {
       avatar = child;
     } else {
       content.push(child);
@@ -32,5 +32,5 @@ const TimeLineItem = (props: timeLineItemProp) => {
   </li>
   };
 
-TimeLineItem.icon = RoundAvatar;
+TimeLineItem.icon = AvatarImage;
 export default TimeLineItem;

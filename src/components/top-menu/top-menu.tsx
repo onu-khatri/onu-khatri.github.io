@@ -10,7 +10,7 @@ import {
   RocketIcon,
   //DoubleArrowDownIcon,
 } from "@radix-ui/react-icons";
-import RoundAvatar from "../avatar/avatar";
+import AvatarImage from "../avatar/avatar";
 import SocialLinks from "../social-links/social-links";
 import {
   avatarButton,
@@ -70,7 +70,7 @@ const CollapsibleTopMenu = (props: TopMenuProps) => {
   return (
     <div className={stickyMenuContainer}>      
       <button onClick={closeTrigger} className={avatarButton}>
-      <RoundAvatar avatarSize={avatarSize} src="profile.jpg" alt="Anup Singh"/>
+      <AvatarImage avatarSize={avatarSize} src="profile.jpg" alt="Anup Singh"/>
       </button>
       <Collapsible.Root
         className={collapsibleRoot}

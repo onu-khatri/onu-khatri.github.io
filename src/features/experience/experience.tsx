@@ -16,9 +16,9 @@ import { ExperienceTimer } from "../../components/experience-timer/experience-ti
 export default function Experience() {
   return (
     <Box className={`row ${experienceRoot}`} as="article">
-      <h2 style={{marginBottom: "12vh"}}>Experience</h2>
+      <h2 style={{ marginBottom: "12vh" }}>Experience</h2>
       <div className={timerHolder}>
-      <ExperienceTimer/>
+        <ExperienceTimer />
       </div>
       <TimeLineContainer>
         <TimeLineContainer.item>
@@ -33,13 +33,36 @@ export default function Experience() {
               <CalendarIcon /> June 2020 - Current
             </div>
             <h4 className={companyHolder}>
-              <FigmaLogoIcon /> CareerBuilder.com India Pvt. Ltd, Noida
+              <FigmaLogoIcon /> CareerBuilder.com, Noida
             </h4>
-            <p className={paraHolder} >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-              obcaecati ipsa quae, iusto laudantium qui, nisi eum modi
-              perspiciatis quasi facilis corporis iure soluta enim incidunt
-              itaque aspernatur sequi tempora.
+            <p className={paraHolder}>
+              CareerBuilder is an employment website that operates in the United
+              States and Europe. Here, We use data-driven technology and
+              personalized tools to help match employers with great candidates
+              based on individual wants, needs, and unique skill sets.
+            </p>
+            <p>
+              I'm working on the Talent Discovery Platform of CareerBuilder.com
+              that provide solutions and services to employers and recruiters. 
+              Recruiter can perform semantic search for the candidates, send the messages, jobs from the system and client can also add candidates to their ATS.
+            </p>
+            <p>
+              We recently developed two new solutions for clients: Pay Per
+              Resume and Pay For Performance.
+              <ul>
+                <li>
+                  "Pay Per Resume" is an innovative approach to recruitment that
+                  allows clients and their entire recruitment team to pay only for
+                  the resumes that they view instead of having to commit to the
+                  monthly cost of a license.
+                </li>
+                <li>
+                  "Pay For Performance" model offers a more flexible way to
+                  advertise all client jobs, and is designed to align what
+                  client pay with what we deliver. When client qualify, client
+                  only spend when candidates apply to their positions.
+                </li>
+              </ul>
             </p>
           </Box>
         </TimeLineContainer.item>
@@ -50,7 +73,7 @@ export default function Experience() {
             avatarSize={avatarSize}
           ></TimeLineItem.icon>
           <Box>
-            <h3 className={headerTitle}>Senior .Net developer</h3>
+            <h3 className={headerTitle}>Senior Web Developer</h3>
             <div className={datePlaceHolder}>
               <CalendarIcon /> Nov 2015 - Jun 2020
             </div>
@@ -58,11 +81,37 @@ export default function Experience() {
               <FigmaLogoIcon /> Admiral Group Plc, InspopIndia.com Pvt. Ltd,
               Gurugram
             </h4>
-            <p className={paraHolder} >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-              obcaecati ipsa quae, iusto laudantium qui, nisi eum modi
-              perspiciatis quasi facilis corporis iure soluta enim incidunt
-              itaque aspernatur sequi tempora.
+            <p className={paraHolder}>
+              InspopIndia.com was a branch of Admiral Group Plc in India to
+              provide the technical support for the Insurance based products
+              like Rastreator. Rastreator.com is Spain’s most popular online
+              insurance broker and price comparison platform. Rastreator.com
+              Provide different comparison products for Car, Telephony, Travel,
+              Energy and Finance.
+            </p>
+            <p>
+              I worked as a Senior Web Developer for 7 projects of company. I
+              provided support for Rastreator.com and upgraded their projects
+              from old technologies to .net core and Angular like Car-Insurance
+              and Telephony. I also developed new projects from scratch Like:
+              <ul>
+                <li>
+                  Wakeel.com: It is an insurance comparison project which
+                  provide services for Gulf and MENA countries.
+                </li>
+                <li>
+                  MultiProduct for Rastreator.com: Affiliate selling of car
+                  products on Amazon.com
+                </li>
+                <li>
+                  Viajes for Rastreator.com: Affiliate selling of bookings for
+                  Booking.com and Flight tickets for Kayak.com
+                </li>
+                <li>
+                  adopta-un-perro.rastreator.com: A public welfare project for
+                  spain, where people can adopt the dogs.
+                </li>
+              </ul>
             </p>
           </Box>
         </TimeLineContainer.item>
@@ -85,9 +134,9 @@ export default function Experience() {
               the top three revenue generating projects of organization. I
               Created survey based web-projects for Nickelodeon and The Guardian
               which show the comparison and statics between different brand of
-              UK, US and Aus. Also developed a cycle-training project for UK users
-              that helped organization to register their users online as well as
-              track the learning performance.
+              UK, US and Aus. Also developed a cycle-training project for UK
+              users that helped organization to register their users online as
+              well as track the learning performance.
             </p>
             <p className={paraHolder}>
               In projects, we also provided D3.js based charts. User were able
@@ -121,9 +170,10 @@ export default function Experience() {
               I Worked as a freelancer on .NET platform with more than two
               clients, mainly with <i>GIIT Pvt. Ltd</i>. It was great experience
               to complete A-Z of development by understanding the client
-              requirements and goals. Successfully deliver the School Management tools, Leave management
-              tool, An online exam portal for IT coaching Institute and also
-              upgrade 2 projects from web-form to MVC pattern.
+              requirements and goals. Successfully deliver the School Management
+              tools, Leave management tool, An online exam portal for IT
+              coaching Institute and also upgrade 2 projects from web-form to
+              MVC pattern.
             </p>
             <p className={paraHolder}>
               I also developed a store-management web-portal for{" "}

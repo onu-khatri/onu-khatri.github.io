@@ -2,7 +2,8 @@ import { whiteA } from "@radix-ui/colors";
 import { style } from "@vanilla-extract/css";
 
 export const IntroContainer = style({
-  color: whiteA.whiteA10
+  color: whiteA.whiteA10,
+  minHeight: "98vh"
 });
 
 export const toolTitle = style({

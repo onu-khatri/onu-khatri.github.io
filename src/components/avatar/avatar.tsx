@@ -1,8 +1,8 @@
 import * as Avatar from "@radix-ui/react-avatar";
-import { avatarFallback, avatarImage, avatarRoot } from "./avatar.css";
+import { avatarFallback, avatarImage, avatarRoot, avatarRound } from "./avatar.css";
 
-const RoundAvatar = (props: {[x: string]: string}) => (
-<Avatar.Root className={`${avatarRoot} ${props.avatarSize}`}>
+const AvatarImage = (props: {[x: string]: string}) => (
+<Avatar.Root className={`${avatarRoot} ${props.avatarSize} ${props.className} ${props.isSquare == 'true' ? '' : avatarRound}` }>
             <Avatar.Image
               className={avatarImage}
               src= {props.src}//"profile.jpg"
@@ -14,4 +14,4 @@ const RoundAvatar = (props: {[x: string]: string}) => (
           </Avatar.Root>
 );
 
-export default RoundAvatar;
+export default AvatarImage;

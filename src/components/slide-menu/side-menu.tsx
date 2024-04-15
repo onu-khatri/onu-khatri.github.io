@@ -11,7 +11,7 @@ import {
   RocketIcon,
  // DoubleArrowDownIcon,
 } from "@radix-ui/react-icons";
-import RoundAvatar from "../avatar/avatar";
+import AvatarImage from "../avatar/avatar";
 import SocialLinks from "../social-links/social-links";
 import {
   avatarSize,
@@ -65,7 +65,7 @@ const CollapsibleSideMenu = (props: SideMenuProps) => {
       onOpenChange={props.setOpen}      
     >
       <Collapsible.Content className={collapsibleContent} forceMount>
-        <RoundAvatar avatarSize={avatarSize} src="profile.jpg" alt="Anup Singh"/>
+        <AvatarImage avatarSize={avatarSize} src="profile.jpg" alt="Anup Singh"/>
         <div className={userName}>
           <span>Anup Singh</span>
         </div>

@@ -4,6 +4,7 @@ import Experience from "../../features/experience/experience";
 import HomeLanding from "../../features/home/home";
 import { Introduction } from "../../features/intoduction/introduction";
 import { homeContainer } from "./home.css";
+import Projects from "../../features/projects/projects";
 
 export default function HomePage() {
   
@@ -14,6 +15,7 @@ export default function HomePage() {
         <HomeLanding />
         <Introduction />
         <Experience />
+        <Projects />
     </Box>
   )
 } 
