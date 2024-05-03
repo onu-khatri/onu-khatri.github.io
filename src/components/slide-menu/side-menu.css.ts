@@ -1,4 +1,4 @@
-import { blackA, violetA, whiteA } from "@radix-ui/colors";
+import { violetA, whiteA } from "@radix-ui/colors";
 import { keyframes, style } from "@vanilla-extract/css";
 
 

@@ -15,7 +15,7 @@ import { ExperienceTimer } from "../../components/experience-timer/experience-ti
 
 export default function Experience() {
   return (
-    <Box className={`row ${experienceRoot}`} as="article">
+    <Box className={`row ${experienceRoot}`} as="article" name="experience">
       <h2 style={{ marginBottom: "12vh" }}>Experience</h2>
       <div className={timerHolder}>
         <ExperienceTimer />

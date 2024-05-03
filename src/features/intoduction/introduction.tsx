@@ -9,13 +9,29 @@ import {
   toolKitListItem,
   toolTitle,
 } from "./introduction.css";
+import { motion } from "framer-motion";
 
 export const Introduction = () => {
 
   
-  return <Box className={`row  ${IntroContainer}`} as="article" reset={false}>
-    <Box className={`col-md-6 ${aboutInfo}`}>      
-      <h2>About Me:</h2>
+  return <Box className={`row  ${IntroContainer}`} as="article" reset={false} name="about">
+     <motion.div className={`col-md-6 ${aboutInfo}`}
+   variants={{
+    hidden: { opacity: 0, translateX: "-200px" },
+    visible: { opacity: 1, translateX: 0 }
+  }}
+  transition={{
+    type: "spring",
+    duration: 1,
+    damping: 8,
+    delay: 0.3,
+    stiffness: 100,
+  }}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.3 }}>
+     <>      
+     <h2>About Me:</h2>
       <p className={intoPara}>
         A Full-Stack web developer and designer (sometimes) with 12 years
         commercial experience creating successful websites with engaging,
@@ -41,8 +57,24 @@ export const Introduction = () => {
       </p>
       <p>For more details on this part of my experience, see my CV.</p>
       
-    </Box>
-    <Box className="col-md-6">
+     </>
+    </motion.div>
+    <motion.div className="col-md-6"
+   variants={{
+    hidden: { opacity: 0, translateX: "200px" },
+    visible: { opacity: 1, translateX: 0 }
+  }}
+  transition={{
+    type: "spring",
+    duration: 1,
+    damping: 8,
+    delay: 0.3,
+    stiffness: 100,
+  }}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.3 }}>
+      <>
       <h2 style={{marginLeft: "2vw"}}>
         My ToolKit <DesktopIcon height={25} width={25} style={{marginLeft: "16px", position: "absolute"}} />
       </h2>
@@ -186,6 +218,7 @@ export const Introduction = () => {
           <span className={toolTitle}>GDPR</span>
         </li>
       </ul>
-    </Box>
+      </>
+    </motion.div>
   </Box>
 };

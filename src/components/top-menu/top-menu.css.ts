@@ -80,7 +80,16 @@ export const separatorRoot = style({
 
 export const linkData = style({
   display: "flex",
-  columnGap: '8px'
+  columnGap: '8px',
+  cursor: 'pointer'
+});
+
+export const activeLink = style({
+  selectors: {
+  [`${linkData}.&`]: {
+    color: "red"
+  }
+}
 });
 
 export const iconImages = style({
@@ -118,8 +127,7 @@ export const stickyMenuContainer = style({
   position: "sticky",
   top: "0",
   width: "100%",
-  zIndex: "999"
-
+  zIndex: "999",
 })
 
 export const collapsibleRoot = style({
@@ -131,6 +139,8 @@ export const collapsibleRoot = style({
   display: "grid",
   width: "100%",
   gridTemplateColumns: "1fr",
+  paddingTop: "16px",
+  background: "black",
 
   selectors: {
     '&[data-state="closed"]': {
@@ -191,4 +201,14 @@ export const userName = style({
   wordSpacing: "2px",
   lineHeight: "16px",
   margin: "0 10px 0 0"
-})
+});
+
+export const pageTopScrollBar = style({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
+  height: "6px",
+  background: "#fe0222",
+  transformOrigin: "0%",
+});

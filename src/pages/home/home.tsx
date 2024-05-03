@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Box } from "../../components/box/box";
 import Experience from "../../features/experience/experience";
 import HomeLanding from "../../features/home/home";

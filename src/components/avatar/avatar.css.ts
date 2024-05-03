@@ -1,4 +1,4 @@
-import {violet, blackA} from "@radix-ui/colors";
+import {violet, whiteA} from "@radix-ui/colors";
 import { style } from '@vanilla-extract/css';
 
 export const avatarRoot = style({
@@ -9,8 +9,8 @@ export const avatarRoot = style({
   overflow: 'hidden',
   userSelect: 'none',
   borderRadius: '5%',
-  backgroundColor: blackA.blackA3,
-  border: "gray 4px solid"
+  backgroundColor: whiteA.whiteA12,
+  border: `${whiteA.whiteA12} 2px solid`
 });
 
 export const avatarRound = style({

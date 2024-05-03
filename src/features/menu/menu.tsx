@@ -3,8 +3,8 @@ import CollapsibleSideMenu from "../../components/slide-menu/side-menu";
 import CollapsibleTopMenu from "../../components/top-menu/top-menu";
 
 const Menu = () => {
-  const [openSlideMenu, setSlideMenuOpen] = React.useState(true);
-  const [openTopMenu, setTopMenuOpen] = React.useState(false);
+  const [openSlideMenu, setSlideMenuOpen] = React.useState(false);
+  const [openTopMenu, setTopMenuOpen] = React.useState(true);
   //const [open, setOpen] = React.useState(true);
 
   const setOpenActionForSlideMenu = (value: boolean) => {

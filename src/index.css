@@ -37,6 +37,7 @@ h1 {
 h2 {
   font-size: 1.616em;
   line-height: calc(18px + 1vw); /* Responsive Vertical Rhythm */
+  color: #ee4e62
 }
 
 h3 {

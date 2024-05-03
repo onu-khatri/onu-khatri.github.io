@@ -38,7 +38,7 @@ const HomeLanding = () => {
     newTextDelay: 2000,
   };
   return (
-    <Box className="row">
+    <Box className="row" name="home">
       <Box
         as="article"
         id="quick-into"

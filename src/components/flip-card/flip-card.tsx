@@ -1,8 +1,9 @@
-import { Children, isValidElement, ReactElement, ReactNode, useState } from "react"
+import { Children, isValidElement, ReactElement, ReactNode, useEffect, useId, useRef, useState } from "react"
 import FrontSide from "./front-side";
 import BackSide from "./back-side";
 import { cardContainer, cardContent, cardMoreButton, moreButton } from "./flip-card.css";
 import { FlipArrow } from "../flip-arrow/flip-arrow";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export interface containerProps extends React.PropsWithChildren {
   children?: ReactElement[] | ReactElement,
@@ -13,7 +14,19 @@ const FlipCard = (props: containerProps) => {
   let frontSide;
   let backSide;
   const content: ReactNode[] = [];
+  const id = useId(); 
+  
+  const ref = useRef(null);
+  const isInview = useInView(ref, { once: true });
+  const controls = useAnimation();
+  
+  useEffect(() => {
+    if (isInview) {
+      controls.start("visible");
+    }
+  }, [isInview]);
 
+  
   Children.forEach(props.children, (child) => {
     if (!isValidElement(child)) return;
     if (child.type === FrontSide) {
@@ -27,19 +40,33 @@ const FlipCard = (props: containerProps) => {
 
   const [flipState, setFlipState] = useState(false);
   
- return <div className={`${cardContainer} ${props.className}`}>
-    <input type="checkbox" id="card1" className={cardMoreButton} aria-hidden="true" checked={flipState}/>
+ return <motion.div ref={ref} className={`${cardContainer} ${props.className}`}
+ variants={{
+  hidden: { opacity: 0, translateX: -20 },
+  visible: { opacity: 1, translateX: 0 }
+}}
+transition={{
+  type: "spring",
+  duration: 2,
+  damping: 8,
+  delay: 0.5,
+  stiffness: 100,
+}}
+  initial='hidden'
+  animate={controls}   
+ >
+    <input type="checkbox" id={`card-${id}`} className={cardMoreButton} aria-hidden="true" checked={flipState}/>
   
     <div className={cardContent}>
       {frontSide}
       {backSide}
       </div>
-      <label for="card1" className={moreButton} aria-hidden="true">
+      <label htmlFor={`card-${id}`} className={moreButton} aria-hidden="true">
         <FlipArrow value={flipState} setValue={setFlipState}/>
     </label>
       
     { content }
-  </div>
+  </motion.div>
 };
 
 FlipCard.frontSide = FrontSide;
