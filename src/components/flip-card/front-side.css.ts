@@ -2,6 +2,7 @@ import { whiteA } from "@radix-ui/colors";
 import { style } from "@vanilla-extract/css";
 
 export const frontContainer = style({
+	lineHeight: "1.5em",
   position: "absolute",
 	top: 0,
 	left: 0,
@@ -10,7 +11,7 @@ export const frontContainer = style({
 	backfaceVisibility: "hidden",
 	transformStyle: "preserve-3d",
 	borderRadius: "6px",
-  color: whiteA.whiteA10,
+  color: whiteA.whiteA12,
   backgroundColor: "#000",
 	backgroundSize: "cover",
 	backgroundPosition: "center center",

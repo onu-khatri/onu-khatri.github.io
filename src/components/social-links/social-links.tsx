@@ -27,7 +27,7 @@ const SocialLinks = (props: {[x: string]: string}) => (
       orientation="vertical"
       style={{ margin: "0 15px" }}
     />
-    <a href="">
+    <a href="https://www.instagram.com/2.5.akshar?igsh=MXhkOTA2cjR3b3ZjNQ==" target="_blank">
       <InstagramLogoIcon className={props.iconImages}/>
     </a>
     <Separator.Root

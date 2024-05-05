@@ -2,6 +2,7 @@ import { whiteA } from "@radix-ui/colors";
 import { style } from "@vanilla-extract/css";
 
 export const backContainer = style({
+	lineHeight: "1.5em",
   position: "absolute",
 	top: 0,
 	left: 0,
@@ -10,7 +11,7 @@ export const backContainer = style({
 	backfaceVisibility: "hidden",
 	transformStyle: "preserve-3d",
 	borderRadius: "6px",
-	color: whiteA.whiteA10,
+	color: whiteA.whiteA12,
 	transform: "rotateY(180deg)",
 	background: "#000",
 	border: "2px solid rgb(240, 240, 240)",
@@ -33,7 +34,7 @@ export const backContainer = style({
 
 export const backInnerContainer = style({
 	height: "100%",
-		display: "grid",
-		padding: "1.5em",
+		display: "block",
+		padding: "0.5em",
 		transform: "translateZ(80px) scale(0.94)"
 });

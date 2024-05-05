@@ -2,7 +2,7 @@ import { whiteA } from "@radix-ui/colors";
 import { style } from "@vanilla-extract/css";
 
 export const IntroContainer = style({
-  color: whiteA.whiteA10,
+  color: whiteA.whiteA12,
   minHeight: "98vh"
 });
 

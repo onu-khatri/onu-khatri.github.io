@@ -2,7 +2,7 @@ import { style } from "@vanilla-extract/css";
 
 export const cardContainer = style({
   width: "365px",
-  height: "37em",
+  height: "34em",
   margin: "1em",
   perspective: "1500px"
 });

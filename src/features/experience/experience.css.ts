@@ -2,7 +2,7 @@ import { whiteA } from "@radix-ui/colors";
 import { style } from "@vanilla-extract/css";
 
 export const experienceRoot = style({
-  color: whiteA.whiteA10,
+  color: whiteA.whiteA12,
   letterSpacing: "1px",
   padding: "2vh 4vw 2vh",
   marginTop: "6vh"
@@ -52,6 +52,6 @@ export const companyHolder = style({
 })
 
 export const avatarSize = style({
-  width: "80px",
-  height: "80px"
+  width: "5em",
+  height: "5em"
 })

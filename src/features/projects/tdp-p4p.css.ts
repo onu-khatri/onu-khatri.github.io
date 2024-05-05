@@ -32,8 +32,8 @@ export const styleChipsContainer = style({
 
 export const styleChip = style({
   width: "calc(max-content + 20px)",
-  background: "radial-gradient(circle, rgb(0 32 188) 95%, rgba(6, 0, 37, 1) 100%)",
-  border: "1px solid #212121",
+  // background: "radial-gradient(circle, rgb(0 32 188) 95%, rgba(6, 0, 37, 1) 100%)",
+  border: "1px solid white",
   color: whiteA.whiteA12,
   borderRadius:"10px",
   padding: "2px 12px"
@@ -46,3 +46,7 @@ export const companyCardLogo = style({
   width: "3em",
   height: "3em"
  });
+
+ export const backendList = style({
+  marginBottom: "5px"
+ })

@@ -70,12 +70,12 @@ export const triggerAvatarSize = style({
 });
 
 export const linkText = style({
-  color: whiteA.whiteA10,
+  color: whiteA.whiteA12,
   fontSize: "14px"
 });
 
 export const separatorRoot = style({
-  backgroundColor: whiteA.whiteA10
+  backgroundColor: whiteA.whiteA12
 });
 
 export const linkData = style({
@@ -193,7 +193,7 @@ export const iconButton = style({
 });
 
 export const userName = style({
-  color: whiteA.whiteA10,
+  color: whiteA.whiteA12,
   fontSize: "20px",
   fontFamily: "serif",
   fontWeight: "600",

@@ -11,13 +11,13 @@ export const timeLineItemStyle = style({
 })
 
 export const IconStyle = style({
-  top: "12px",
+  top: "10px",
   position: "absolute",
   color: "#151515",
   background: "#324454",
   borderRadius: "50%",
   textAlign: "center",
-  left: "30px",
+  left: "75px",
   margin: "0 0 0 -25px",
 
   '@media': {
@@ -51,10 +51,10 @@ export const labelStyle = style({
   position: "relative",
   borderRadius: "5px",
   minHeight: "150px",
-  boxShadow: "inset 3px 1px 10px -5px #48abe0",
+ // boxShadow: "inset 3px 1px 10px -5px #48abe0",
 
   selectors: {
-    '&:after': {
+    '&:afterr': {
       right: "100.3%",
       border: "solid transparent",
       content: " ",

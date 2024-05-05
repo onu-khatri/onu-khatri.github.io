@@ -37,7 +37,7 @@ export const triggerAvatarSize = style({
 });
 
 export const linkText = style({
-  color: whiteA.whiteA10,
+  color: whiteA.whiteA12,
   fontSize: "17px"
 });
 
@@ -120,7 +120,7 @@ export const iconButton = style({
   alignItems: "center",
   justifyContent: "center",
   color: whiteA.whiteA12,
-  boxShadow: `0 2px 10px ${whiteA.whiteA10}`,
+  boxShadow: `0 2px 10px ${whiteA.whiteA12}`,
   position: "absolute",
   top: "3px",
   left: "3px",
