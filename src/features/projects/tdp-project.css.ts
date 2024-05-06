@@ -3,6 +3,7 @@ import { style } from "@vanilla-extract/css";
 
 export const headerImageContainer = style({
   width: "100%",
+  height: "153px",
   maxHeight:"200px",
   marginBottom: "7px",
 });

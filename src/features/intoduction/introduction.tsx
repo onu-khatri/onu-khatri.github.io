@@ -1,4 +1,4 @@
-import { DesktopIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import { DesktopIcon, GitHubLogoIcon, EnvelopeClosedIcon, MobileIcon,  } from "@radix-ui/react-icons";
 import { Box } from "../../components/box/box";
 import {
   aboutInfo,
@@ -10,6 +10,7 @@ import {
   toolTitle,
 } from "./introduction.css";
 import { motion } from "framer-motion";
+import { whiteA } from "@radix-ui/colors";
 
 export const Introduction = () => {
 
@@ -55,8 +56,11 @@ export const Introduction = () => {
         Whether you're a business owner looking to get started on a app or web development project with a freelance web developer, 
         a developer looking to collaborate on something cool, or just wanting to say hi, shoot me a message and let's work together.
       </p>
-      <p>For more details on this part of my experience, see my CV.</p>
-      
+      <p style={{marginBottom: 0, paddingBottom: "5px"}}>For more details on this part of my experience, <a>see my CV.</a></p>
+      <div style={{lineHeight: "1.3em", margin:0, padding: 0, display: "flex", columnGap: "20px" }}>
+        <div style={{display: "inline-block"}}  itemScope itemType="https://schema.org/email"><a itemProp="email" href="mailto:onu.khatri@gmail.com"><EnvelopeClosedIcon/>&nbsp;&nbsp;<span style={{color: whiteA.whiteA12}}>onu.khatri@gmail.com</span></a></div>
+        <div style={{display: "inline-block"}} itemScope itemType="https://schema.org/telephone"><a itemProp="telephone" href="tel:+918570000751"><MobileIcon/>&nbsp;&nbsp;<span style={{color: whiteA.whiteA12}}>+91-8570000751</span></a></div>
+     </div>
      </>
     </motion.div>
     <motion.div className="col-md-6"

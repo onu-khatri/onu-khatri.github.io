@@ -23,7 +23,7 @@ export const TdpP4P = () => (
     <FlipCard.frontSide>
       <FrontSide.headerImage
         imageClass={headerImageContainer}
-        src="thumbnails/TDP-thumb.jpg"
+        src="thumbnails/p4p.png"
       />
       <h3 className={`${cardTitleCss} ${cardContentMargin}`}>
         Pay For Performance
