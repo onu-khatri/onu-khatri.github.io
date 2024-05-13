@@ -5,6 +5,7 @@ import { TdpProject } from "./tdp-project";
 import { AdmiralTravel } from "./vuelos";
 import { Wakeel } from "./wakeel";
 import { Rastreator } from "./rastreator";
+import { UkCycle } from "./uk-cycle";
 
 const Projects = () => {
   return (
@@ -21,6 +22,7 @@ const Projects = () => {
         <Wakeel></Wakeel>
         <Rastreator></Rastreator>
         <AdmiralTravel></AdmiralTravel>
+        <UkCycle></UkCycle>
       </div>
       </div>
     </Box>

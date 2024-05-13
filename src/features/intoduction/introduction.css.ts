@@ -3,7 +3,7 @@ import { style } from "@vanilla-extract/css";
 
 export const IntroContainer = style({
   color: whiteA.whiteA12,
-  minHeight: "98vh"
+  minHeight: "86vh"
 });
 
 export const toolTitle = style({
@@ -43,4 +43,9 @@ export const imagesStyle = style({
 
 export const intoPara = style({
   margin: "calc(1em + .5vh) 0"
-})
+});
+
+export const hobbyIcon = style({
+  width: "24px",
+  margin: "23px 0 0"
+});

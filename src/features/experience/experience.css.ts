@@ -5,7 +5,7 @@ export const experienceRoot = style({
   color: whiteA.whiteA12,
   letterSpacing: "1px",
   padding: "2vh 4vw 2vh",
-  marginTop: "6vh"
+  marginTop: "1vh"
 });
 
 export const timerHolder = style({

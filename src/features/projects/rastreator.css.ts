@@ -5,6 +5,7 @@ export const headerImageContainer = style({
   width: "100%",
   maxHeight:"200px",
   marginBottom: "7px",
+  height: "153px",
 });
 
 export const cardTitleCss = style({

@@ -5,6 +5,8 @@ import HomeLanding from "../../features/home/home";
 import { Introduction } from "../../features/intoduction/introduction";
 import { homeContainer } from "./home.css";
 import Projects from "../../features/projects/projects";
+import { Initiatives } from "../../features/Initiatives/initiatives";
+import { Contact } from "../../features/contact/contact";
 
 export default function HomePage() {
   
@@ -16,6 +18,8 @@ export default function HomePage() {
         <Introduction />
         <Experience />
         <Projects />
+        <Initiatives/>
+        <Contact/>
     </Box>
   )
 } 

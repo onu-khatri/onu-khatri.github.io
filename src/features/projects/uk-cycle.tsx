@@ -11,13 +11,13 @@ import {
   styleChipsContainer,
 } from "./rastreator.css";
 
-export const Rastreator = () => (
+export const UkCycle = () => (
   <FlipCard>
     <AvatarImage
       isSquare="true"
       alt="CareerBuilder"
       className={companyCardLogo}
-      src="icons/admiral.png"
+      src="icons/E2E.png"
     ></AvatarImage>
 
     <FlipCard.frontSide>
@@ -26,20 +26,19 @@ export const Rastreator = () => (
         src="thumbnails/rastreator.png"
       />
       <h3 className={`${cardTitleCss} ${cardContentMargin}`}>
-      @Rastreator Comparador
+      UK Cycle-Learning
       </h3>
       <div className={cardContentMargin} style={{minHeight: "8em"}}>
-        Rastreator provide the price comparison for Car/Bike insurances, Telephony packages, Energy and Mortgages with with guaranteed prices and exclusive offers of partners. 
+      cycletraining.spa-portal.co.uk is a light-weight web portal which enable cycle-teaching organizations of London to register their users online as well as track performance.
+      This project also handle a survey to decide the learning-level of the user
+  
       </div>
-      <div style={{minHeight: "7em"}}>
+      <div style={{minHeight: "4em"}}>
         <ul className={styleChipsContainer}>
-          <li className={styleChip}>.Net Core, Rest-API</li>
-          <li className={styleChip}>Angular</li>
+          <li className={styleChip}>ASP.net Razor Pages</li>
           <li className={styleChip}>MS SQL</li>
-          <li className={styleChip}>Redis, RabbitMQ</li>
-          <li className={styleChip}>Azure, Docker</li>
-          <li className={styleChip}>TFS</li>
-          <li className={styleChip}>GDPR</li>
+          <li className={styleChip}>IIS Server</li> 
+          <li className={styleChip}>ASP.NET MVC and Rest-API</li>
         </ul>
       </div>
       <div style={{padding: "28px 10px 5px"}}>

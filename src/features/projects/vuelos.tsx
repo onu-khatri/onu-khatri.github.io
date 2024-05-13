@@ -1,6 +1,7 @@
 import AvatarImage from "../../components/avatar/avatar";
 import FlipCard from "../../components/flip-card/flip-card";
 import FrontSide from "../../components/flip-card/front-side";
+import { backendList } from "./tdp-p4p.css";
 import {
   cardContentMargin,
   cardTitleCss,
@@ -40,35 +41,29 @@ export const AdmiralTravel = () => (
           <li className={styleChip}>MS Sql Server</li>
         </ul>
       </div>
+      
+      <div style={{padding: "28px 10px 5px"}}>
+        <span style={{color: "white", borderBottom: "2px solid rgb(238, 78, 98)", padding: "2px 2px"}}>Participate as</span>: Associate Software Engineer
+        </div>
     </FlipCard.frontSide>
 
     <FlipCard.backSide>
+    <h3 className={`${cardTitleCss} ${cardContentMargin}`} style={{textAlign: "center"}}>
+        @Rastreator-Vuelos
+      </h3>
       <div>
-        <p>
-          This TDP is group of multiple sub projects that work on different
-          technologies:
+        <p style={{textAlign: "justify"}}>
+        Viajes is a project of Rastreator, to provide dynamic links and to gather data of the user who want to travel in Spain. 
+        This project helps Rastreator to start a Affiliated-marketing based project and increase the SEO-links and visibility at search engine indexes.
         </p>
-        <ul style={{padding: "0", listStyle: "square inside", columnGap: "20px", columnCount: "2"}}>
-          <li style={{width: "max-content", position: 'relative', left: "-5px"}}>
-            <span>Home Page</span>
-          </li>
-          <li style={{width: "max-content", position: 'relative', left: "-5px"}}>
-            <span>Messages</span>
-          </li>
-          <li style={{width: "max-content", position: 'relative', left: "-5px"}}>
-            <span>Candidate Search</span>
-          </li>
-          <li style={{width: "max-content", position: 'relative', left: "-5px"}}>
-            <span>Search Settings</span>
-          </li>
-          <li style={{width: "max-content", position: 'relative', left: "-5px"}}>
-            <span>Candidate Detail</span>
-          </li>
+        <h4 className={cardContentMargin} style={{margin: "0 0 8px 0"}}>My Role:</h4>
+        <ul style={{margin: 0, width: "94%", paddingLeft: "11px"}}>
+          <li className={backendList}>Requirement analyze and Client related documentation.</li>
+          <li className={backendList}>Build and Task completions, TFS branch-code manage</li>
+          <li className={backendList}>Create and maintain Schema, Types, Tables and Functions on MS SQL Server. </li>
+          <li className={backendList}>Reviews and optimize code, maintain the JS libraries. </li>
         </ul>
       </div>
-      <div style={{padding: "28px 10px 5px"}}>
-        <span style={{color: "white", borderBottom: "2px solid rgb(238, 78, 98)", padding: "2px 2px"}}>Participate as</span>: Senior Full-Stack Engineer
-        </div>
     </FlipCard.backSide>
   </FlipCard>
 );
