@@ -1,4 +1,4 @@
-import { DesktopIcon, GitHubLogoIcon, EnvelopeClosedIcon, MobileIcon, CodeIcon,  } from "@radix-ui/react-icons";
+import { DesktopIcon, GitHubLogoIcon, EnvelopeClosedIcon, MobileIcon } from "@radix-ui/react-icons";
 import { Box } from "../../components/box/box";
 import {
   aboutInfo,
@@ -53,13 +53,13 @@ export const Introduction = () => {
         Whether you're a business owner looking to get started on a app or web development project with a freelance web developer, 
         a developer looking to collaborate on something cool, or just wanting to say hi, shoot me a message and let's work together.
       </p>
-      <p style={{marginBottom: 0, paddingBottom: "5px"}}>For more details on this part of my experience, <a>see my CV.</a></p>
+      <p style={{marginBottom: 0, padding: "18px 0 5px"}}>For more details on this part of my experience, <a>see my CV.</a></p>
       <div style={{lineHeight: "1.3em", margin:0, padding: 0, display: "flex", columnGap: "20px" }}>
         <div style={{display: "inline-block"}}  itemScope itemType="https://schema.org/email"><a itemProp="email" href="mailto:onu.khatri@gmail.com"><EnvelopeClosedIcon/>&nbsp;&nbsp;<span style={{color: whiteA.whiteA12}}>onu.khatri@gmail.com</span></a></div>
         <div style={{display: "inline-block"}} itemScope itemType="https://schema.org/telephone"><a itemProp="telephone" href="tel:+918570000751"><MobileIcon/>&nbsp;&nbsp;<span style={{color: whiteA.whiteA12}}>+91-8570000751</span></a></div>
      </div>
 
-     <div style={{display: 'flex', columnGap: "2em", color: 'darksalmon', maxWidth: "fit-content", borderBottom: '1px solid'}}>
+     <div style={{display: 'flex', columnGap: "2em", color: 'darksalmon', maxWidth: "fit-content", borderBottom: '1px solid', paddingBottom: '3px'}}>
       <h3 style={{margin: "23px 0 0", fontWeight: 500, fontSize: '1.2em'}}>Hobbies: </h3>
       <svg role="img" className={hobbyIcon} data-icon="biking" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><title id="svg-inline--fa-title-UZtUAd7xlGdf">Cycling</title><path fill="currentColor" d="M400 96a48 48 0 1 0-48-48 48 48 0 0 0 48 48zm-4 121a31.9 31.9 0 0 0 20 7h64a32 32 0 0 0 0-64h-52.78L356 103a31.94 31.94 0 0 0-40.81.68l-112 96a32 32 0 0 0 3.08 50.92L288 305.12V416a32 32 0 0 0 64 0V288a32 32 0 0 0-14.25-26.62l-41.36-27.57 58.25-49.92zm116 39a128 128 0 1 0 128 128 128 128 0 0 0-128-128zm0 192a64 64 0 1 1 64-64 64 64 0 0 1-64 64zM128 256a128 128 0 1 0 128 128 128 128 0 0 0-128-128zm0 192a64 64 0 1 1 64-64 64 64 0 0 1-64 64z"></path></svg>
       <svg role="img" data-icon="dumbbell" className={hobbyIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><title id="svg-inline--fa-title-4YCHxRUKBYkS">Gym</title><path fill="currentColor" d="M104 96H56c-13.3 0-24 10.7-24 24v104H8c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h24v104c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm528 128h-24V120c0-13.3-10.7-24-24-24h-48c-13.3 0-24 10.7-24 24v272c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V288h24c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zM456 32h-48c-13.3 0-24 10.7-24 24v168H256V56c0-13.3-10.7-24-24-24h-48c-13.3 0-24 10.7-24 24v400c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V288h128v168c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24z"></path></svg>

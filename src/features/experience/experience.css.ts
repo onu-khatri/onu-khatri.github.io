@@ -4,8 +4,8 @@ import { style } from "@vanilla-extract/css";
 export const experienceRoot = style({
   color: whiteA.whiteA12,
   letterSpacing: "1px",
-  padding: "2vh 4vw 2vh",
-  marginTop: "1vh"
+  padding: "2vh 1em 2vh",
+  marginTop: "3em"
 });
 
 export const timerHolder = style({

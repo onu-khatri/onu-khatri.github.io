@@ -1,15 +1,18 @@
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Box } from "../../components/box/box";
 import { GitCards } from "../../components/git-card/git-card";
 
 export const Initiatives = () => (
   <Box as="article" name="initiates">
-    <h2>Open Source Projects</h2>
+    <h2><GitHubLogoIcon style={{width: "24px", height: "24px"}}/>&nbsp;&nbsp;Open Source Projects</h2>
     <ul
       style={{
         display: "flex",
         listStyle: "none",
         columnGap: "5vw",
-        justifyContent: "flex-start",
+        justifyContent: "space-evenly",
+        flexWrap: "wrap",
+        rowGap: "28px"
       }}
     >
       <GitCards

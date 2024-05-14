@@ -11,7 +11,7 @@ export const homeContainer = style({
 });
 
 export const intro_content = style({
-  "top": "calc(35vh - 80px)",
+  top: "calc(25vh - 80px)",
   position: "relative",
   color: "white",
   display:"grid",

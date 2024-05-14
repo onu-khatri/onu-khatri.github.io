@@ -3,7 +3,7 @@ import { style } from "@vanilla-extract/css";
 
 export const IntroContainer = style({
   color: whiteA.whiteA12,
-  minHeight: "86vh"
+  minHeight: "78vh"
 });
 
 export const toolTitle = style({
