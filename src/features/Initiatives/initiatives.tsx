@@ -21,11 +21,12 @@ export const Initiatives = () => (
         langList={[{ langClass: "TypeScript", name: "Typescript" }]}
         techTags={["NodeJS", "Express"]}
         size={2}
+        url="https://github.com/onu-khatri/Pupetter-Service"
       ></GitCards>
 
       <GitCards
         title="TripYari: Travel CRM-Blog"
-        description="🚀 The service can use to render a web-page on server and perform action like web-page to pdf or snapshots etc"
+        description="🚀 A travel website that provides facilities of CRM, Blog, Affiliated marketing, e-commerce and travel-search. "
         langList={[
           { langClass: "TypeScript", name: "Typescript" },
           { langClass: "CSS", name: "CSS" },
@@ -40,6 +41,7 @@ export const Initiatives = () => (
           "Angular",
         ]}
         size={2}
+        url="https://github.com/onu-khatri/TripYari"
       ></GitCards>
 
       <GitCards
@@ -53,6 +55,7 @@ export const Initiatives = () => (
         ]}
         techTags={["React", "Vite", "HeadLess-UI", "Theme"]}
         size={2}
+        url="https://github.com/onu-khatri/onu-khatri.github.io"
       ></GitCards>
     </ul>
   </Box>

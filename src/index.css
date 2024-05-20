@@ -74,6 +74,15 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
 }
 
+a {
+  color: #1593ff
+}
+
+a:hover {
+  color: #55aefb;
+  text-decoration: none;
+}
+
 .lang.C-Sharp { background-color: #178600; }
 .lang.C { background-color: #555555; }
 .lang.cpp { background-color: #f34b7d; }

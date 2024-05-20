@@ -13,7 +13,7 @@ export const Contact = () => (
       <p
         style={{
           color: whiteA.whiteA9,
-          fontSize: "1.2em",
+          fontSize: "1em",
           padding: 0,
           margin: "0 0 20px 0",
         }}
@@ -47,6 +47,7 @@ export const Contact = () => (
               position: "relative",
               textDecoration: "none",
               paddingLeft: "24px",
+              fontSize: "0.9em",
             }}
           >
             &nbsp;&nbsp;
@@ -56,6 +57,7 @@ export const Contact = () => (
                 height: "24px",
                 position: "absolute",
                 left: "10px",
+                bottom: "-1px"
               }}
             />
             &nbsp;&nbsp;LinkedIn
@@ -78,6 +80,7 @@ export const Contact = () => (
               position: "relative",
               textDecoration: "none",
               paddingLeft: "26px",
+              fontSize: "0.9em"
             }}
           >
             &nbsp;&nbsp;
@@ -87,6 +90,7 @@ export const Contact = () => (
                 height: "24px",
                 position: "absolute",
                 left: "10px",
+                bottom: "-1px"
               }}
             />
             &nbsp;&nbsp;Onu.Khatri@gmail.com
@@ -110,6 +114,7 @@ export const Contact = () => (
               position: "relative",
               textDecoration: "none",
               paddingLeft: "18px",
+              fontSize: "0.9em"
             }}
           >
             &nbsp;&nbsp;
@@ -119,6 +124,7 @@ export const Contact = () => (
                 height: "24px",
                 position: "absolute",
                 left: "10px",
+                bottom: "-1px"
               }}
             />
             &nbsp;&nbsp;+91-8570000751

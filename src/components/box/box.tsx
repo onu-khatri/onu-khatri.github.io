@@ -1,7 +1,6 @@
 import { forwardRef } from 'react';
 import type { AllHTMLAttributes, ElementType, ReactNode } from 'react';
 import { atoms, extractAtoms, Sprinkles } from '../../core/atom';
-import * as resetStyles from '../../core/reset.css';
 
 export interface BoxProps
   extends Omit<
@@ -29,8 +28,8 @@ export const Box = forwardRef<HTMLElement, BoxProps>(
     const [atomsProps, propsToForward] = extractAtoms(props);
     const styleClassName = atoms({
       className: className,
-      reset: props.reset !== false ? Element as keyof typeof resetStyles.element: undefined,
-      ...{...atomsProps, position: position || 'relative'}
+      resetElement: (props.reset !== false ? Element as keyof JSX.IntrinsicElements : undefined),
+      ...{...atomsProps, position: position ?  position : 'relative'}
     });
     
     return <Element ref={ref} className={styleClassName} {...propsToForward} />;

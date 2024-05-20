@@ -1,7 +1,6 @@
 import "./App.css";
 import { baseGrid, pageTopScrollBar } from "./App.css";
 import { Box } from "./components/box/box";
-import { LineTrail } from "./components/line-trail/line-trail";
 import Menu from "./features/menu/menu";
 import HomePage from "./pages/home/home";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -22,7 +21,6 @@ function App() {
       />
     <Box className={baseGrid} style={{width: "100%"}}>
       <>
-      <LineTrail />
         <Menu />
         <HomePage />
       </>

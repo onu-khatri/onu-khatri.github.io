@@ -6,12 +6,12 @@ import { base, element } from "./reset.css";
 export type Sprinkles = Parameters<typeof sprinkles>[0];
 
 export interface Atoms extends Sprinkles {
-  reset?: boolean | keyof JSX.IntrinsicElements | undefined;
+  resetElement?: keyof JSX.IntrinsicElements | undefined;
   className?: string | string[];
 }
 
 export function atoms(atoms: Atoms) {    
-  const { reset, className, ...rest } = atoms;
+  const { resetElement: reset, className, ...rest } = atoms;
   const sprinklesClassNames = sprinkles(rest);
 
   return clsx(

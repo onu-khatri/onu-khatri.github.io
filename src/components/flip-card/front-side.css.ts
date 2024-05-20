@@ -27,7 +27,7 @@ export const frontContainer = style({
 		display: "block",
 		borderRadius: "6px",
 		backfaceVisibility: "hidden",
-		background: `linear-gradient(135deg, rgb(3 95 232 / 70%), #000000)`
+		backgroundImage: 'linear-gradient(to bottom, #00044f, #00084b, #000b47, #000e42, #00103d, #001038, #011033, #03102e, #040e28, #040c22, #03091c, #010616)'
   }
  }
 

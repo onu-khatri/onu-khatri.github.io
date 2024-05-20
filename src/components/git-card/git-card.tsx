@@ -19,6 +19,7 @@ interface GitCardProp extends PropsWithChildren {
   langList: { name: string; langClass: string }[];
   size: number;
   techTags: string[];
+  url: string
 }
 
 export const GitCards = (props: GitCardProp) => {
@@ -36,6 +37,7 @@ export const GitCards = (props: GitCardProp) => {
 
   return (
     <li>
+      <a href={props.url} target="_blank">
       <motion.div
       ref={ref2}
       className={gitCardContainer}
@@ -55,7 +57,7 @@ export const GitCards = (props: GitCardProp) => {
       viewport={{ once: true, amount: 0.3 }}
       //animate={controls2}
     >
-      <h3 style={{ margin: 0, display: "flex", columnGap: '16px', borderBottom: '1px solid', padding: '0 10px 5px 0' }}>
+      <h3 style={{ margin: 0, display: "flex", columnGap: '16px', borderBottom: '1px solid', padding: '0 10px 5px 0', fontSize: "1.3em" }}>
         <CubeIcon style={{ width: "28px", height: "28px" }} /> {props.title}
       </h3>
       <p style={{ fontSize: "1.2em", textAlign: 'justify', margin: '28px 0 25px 0' }}>{props.description}</p>
@@ -69,6 +71,7 @@ export const GitCards = (props: GitCardProp) => {
         ))}
       </ul>
       </motion.div>
+      </a>
     </li>
   );
 };

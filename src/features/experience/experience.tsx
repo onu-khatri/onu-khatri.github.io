@@ -46,7 +46,7 @@ export default function Experience() {
               that provide solutions and services to employers and recruiters. 
               Recruiter can perform semantic search for the candidates, send the messages, jobs from the system and client can also add candidates to their ATS.
             </p>
-            <p>
+            <div>
               We recently developed two new solutions for clients: Pay Per
               Resume and Pay For Performance.
               <ul>
@@ -63,7 +63,7 @@ export default function Experience() {
                   only spend when candidates apply to their positions.
                 </li>
               </ul>
-            </p>
+            </div>
           </Box>
         </TimeLineContainer.item>
         <TimeLineContainer.item>
@@ -89,7 +89,7 @@ export default function Experience() {
               Provide different comparison products for Car, Telephony, Travel,
               Energy and Finance.
             </p>
-            <p>
+            <div>
               I worked as a Senior Web Developer for 7 projects of company. I
               provided support for Rastreator.com and upgraded their projects
               from old technologies to .net core and Angular like Car-Insurance
@@ -112,7 +112,7 @@ export default function Experience() {
                   spain, where people can adopt the dogs.
                 </li>
               </ul>
-            </p>
+            </div>
           </Box>
         </TimeLineContainer.item>
         <TimeLineContainer.item>

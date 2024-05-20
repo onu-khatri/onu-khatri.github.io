@@ -4,7 +4,7 @@ import { style } from "@vanilla-extract/css";
 export const gitCardContainer = style({
   padding: "18px 12px",
   color: whiteA.whiteA12,
-  maxWidth: "365px",
+  maxWidth: "21em",
 
   selectors: {
     '&:hover': {

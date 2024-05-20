@@ -2,7 +2,7 @@ import { keyframes, style } from "@vanilla-extract/css";
 
 export const homeContainer = style({
   width: "100%",
-  height: "100vh",
+  height: "88vh",
   //background: 'url("Anup.jpg") top center',
  // backgroundRepeat: "no-repeat",
  // backgroundSize: "cover",

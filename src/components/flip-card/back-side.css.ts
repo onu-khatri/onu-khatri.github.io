@@ -27,7 +27,7 @@ export const backContainer = style({
 		display: "block",
 		borderRadius: "6px",
 		backfaceVisibility: "hidden",
-			background: `linear-gradient(180deg, rgb(3 81 196 / 70%), #0f0132)`,
+		backgroundImage: 'linear-gradient(to bottom, #00044f, #00084b, #000b47, #000e42, #00103d, #001038, #011033, #03102e, #040e28, #040c22, #03091c, #010616)'
 		}
 	}
 });

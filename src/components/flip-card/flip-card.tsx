@@ -26,7 +26,8 @@ const FlipCard = (props: containerProps) => {
     }
   }, [isInview]);
 
-  
+  const onChange = () => {};
+
   Children.forEach(props.children, (child) => {
     if (!isValidElement(child)) return;
     if (child.type === FrontSide) {
@@ -55,7 +56,7 @@ transition={{
   initial='hidden'
   animate={controls}   
  >
-    <input type="checkbox" id={`card-${id}`} className={cardMoreButton} aria-hidden="true" checked={flipState}/>
+    <input type="checkbox" id={`card-${id}`} className={cardMoreButton} aria-hidden="true" checked={flipState} onChange={onChange}/>
   
     <div className={cardContent}>
       {frontSide}
