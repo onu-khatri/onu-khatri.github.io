@@ -1,4 +1,4 @@
-import { violetA, whiteA } from "@radix-ui/colors";
+import { blackA, violetA, whiteA } from "@radix-ui/colors";
 import { keyframes, style } from "@vanilla-extract/css";
 
 
@@ -27,8 +27,8 @@ export const fadeOutLeftKeyFrame = keyframes({
 });
 
 export const avatarSize = style({
-  width: '150px',
-  height: '150px',
+  width: '100px',
+  height: '100px',
 });
 
 export const triggerAvatarSize = style({
@@ -47,6 +47,11 @@ export const separatorRoot = style({
   height: "2px"
 });
 
+export const mediaSeparatorRoot = style({
+  backgroundColor: whiteA.whiteA12,
+  margin: "0 5px"
+});
+
 export const linkData = style({
   display: "flex",
   columnGap: '15px'
@@ -63,7 +68,7 @@ export const navIconImages = style({
 });
 
 export const socialMargins = style({
-  margin: "20px 0"
+  margin: "2px 0"
 });
 
 export const menuList = style({
@@ -76,6 +81,8 @@ export const menuItem = style({
 });
 
 export const collapsibleRoot = style({
+  minWidth: "50px",
+    minHeight: "50px",
   alignItems: 'center',
   justifyContent: 'center',
   overflow: 'hidden',
@@ -84,20 +91,27 @@ export const collapsibleRoot = style({
   maxWidth: "max-content",
   marginLeft: "1px",
   flex: "1 1 100%",
-  maxHeight: "100vh",
-  position: "sticky",
-  top: "0px",
+  zIndex: "999",
+  background: blackA.blackA12,
+  textAlign: "center"
+});
 
-  selectors: {
-    '&[data-state="closed"]': {
-      animation: `${fadeOutLeftKeyFrame} 1s ease-out`
-    },
-    '&[data-state="open"]': {
-      animation: `${fadeInLeftKeyFrame} 500ms cubic-bezier(0, 0, 0.2, 1);`
+export const menuContainer = style({
+  position: "absolute",
+  top: "1px",
+  left: "1px",  
+  zIndex: 999,
+
+  '@media': {
+    'screen and (min-width: 769px)': {
+      display: "none"
     }
   }
-
 });
+
+export const DropdownMenuArrow = style ({
+  fill: "white"
+})
 
 export const collapsibleContent = style({
   alignItems: 'center',
@@ -106,34 +120,34 @@ export const collapsibleContent = style({
   userSelect: 'none',
   borderRadius: '5%',
   padding: '20px 10px 10px 10px',
-  height: "98.5vh",
   borderRight:"1px dashed #9893f2",
-  animation: `fadeInLeftKeyFrame 1s ease-in`,
+  backgroundImage: "linear-gradient(to top, #000000, #100108, #170413, #1a071d, #170d28, #160e2c, #151031, #131136, #1c0d33, #23092f, #29052a, #2d0125)",
+
+  selectors: {
+    '&[data-state="closed"]': {
+      display: "none"
+    },
+    '&[data-state="open"]': {
+      animation: `${fadeInLeftKeyFrame} 500ms cubic-bezier(0, 0, 0.2, 1);`
+    }
+  }
 });
 
 export const iconButton = style({
   all: "unset",
   fontFamily: "inherit",
   borderRadius: "100%",
-  
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
   color: whiteA.whiteA12,
   boxShadow: `0 2px 10px ${whiteA.whiteA12}`,
-  position: "absolute",
-  top: "3px",
-  left: "3px",
+  backgroundColor: violetA.violetA3,
+  width: "38px",
+  height: "38px",
+  margin: "5px",
 
   selectors: {
-    '&[data-state="closed"]': {
-     display: "none"
-    },
-    '&[data-state="open"]': {
-      backgroundColor: violetA.violetA3,
-      height: "25px",
-      width: "25px",
-    },
     '&:hover': {
       backgroundColor: violetA.violetA3
     },

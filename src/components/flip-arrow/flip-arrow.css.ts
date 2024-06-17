@@ -159,6 +159,7 @@ export const arrowButton = style({
     right: "-3px",
     top: "-4px",
     transform: "rotate(45deg)",
+    opacity: 1
   },
 
   [`${arrowCheckBox} + label > .&:before`]: {

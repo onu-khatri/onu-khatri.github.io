@@ -33,7 +33,7 @@ export class ExperienceTimer extends Component {
     const s = secs - mins * 60;
 
     this.counterElement.innerHTML =
-      `<div style="display: block" class='${divTimer}'><span class='${spanTimer} ${sinceTimer}'>since: 2011.11.01</span></div>`
+      `<div style="display: block" ><span class='${spanTimer} ${sinceTimer}'>since: 2011.11.01</span></div>`
       +`<div class='${divTimer}'>${y}<span class='${spanTimer}'>years</span></div>`
       +`<div class='${divTimer}'>${M}<span class='${spanTimer}'>months</span></div>`
       +`<div class='${divTimer}'>${d}<span class='${spanTimer}'>days</span></div>`

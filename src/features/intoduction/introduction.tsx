@@ -6,6 +6,7 @@ import {
   imagesStyle,
   intoPara,
   IntroContainer,
+  toolKitContainer,
   toolKitList,
   toolKitListItem,
   toolTitle,
@@ -77,7 +78,8 @@ export const Introduction = () => {
      </div>
      </>
     </motion.div>
-    <motion.div className="col-md-6"
+  
+  <motion.div className={`col-md-6 ${toolKitContainer}`}
    variants={{
     hidden: { opacity: 0, translateX: "200px" },
     visible: { opacity: 1, translateX: 0 }

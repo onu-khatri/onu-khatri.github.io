@@ -16,7 +16,6 @@ const SocialLinks = (props: {[x: string]: string}) => (
       className={`${separatorRoot} ${props.separatorClass}`}
       decorative
       orientation="vertical"
-      style={{ margin: "0 15px" }}
     />
     <a href="https://github.com/onu-khatri" target="_blank">
       <GitHubLogoIcon className={props.iconImages}/>
@@ -25,7 +24,6 @@ const SocialLinks = (props: {[x: string]: string}) => (
       className={`${separatorRoot} ${props.separatorClass}`}
       decorative
       orientation="vertical"
-      style={{ margin: "0 15px" }}
     />
     <a href="https://www.instagram.com/2.5.akshar?igsh=MXhkOTA2cjR3b3ZjNQ==" target="_blank">
       <InstagramLogoIcon className={props.iconImages}/>
@@ -34,7 +32,6 @@ const SocialLinks = (props: {[x: string]: string}) => (
       className={`${separatorRoot} ${props.separatorClass}`}
       decorative
       orientation="vertical"
-      style={{ margin: "0 15px" }}
     />
     <a href="mailto:onu.khatri@gmail.com">
       <EnvelopeClosedIcon className={props.iconImages}/>

@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+import { size } from "lodash";
 
 export const timer = style({
   fontSize: "1.3em",
@@ -11,6 +12,13 @@ export const timer = style({
 export const divTimer = style({
   display: "inline-block",
   minWidth: "40px",
+
+  '@media': {
+    'screen and (max-width: 480px)': {
+      minWidth: "33px",
+      fontSize: "1em"
+    }
+  }
 });
 
 export const spanTimer = style({

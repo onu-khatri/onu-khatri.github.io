@@ -15,6 +15,14 @@ export const aboutInfo = style({
   padding: "0 2vw"
 });
 
+export const toolKitContainer = style({
+  
+  '@media': {
+    'screen and (max-width: 480px)': {
+      marginTop: '4vh'
+    }
+  }
+})
 export const toolKitList = style({
   all: "unset",
   listStyle: "none",

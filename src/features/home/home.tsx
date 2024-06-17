@@ -1,42 +1,86 @@
+import { ReactNode } from "react";
 import { ArrowScroll } from "../../components/arrow-scroll/arrow-scroll";
 import { Box } from "../../components/box/box";
 import Typewriter, {
   TypeWriterProps,
 } from "../../components/typewriter/typewriter";
 import {
+  bottomText,
+  devWorkImage,
   highLighter,
   homeContainer,
   intro,
   intro_content,
-  shadowEffect,
+  subTitle,
   typeContainer,
 } from "./home.css";
 
 const HomeLanding = () => {
-  const typeWriterProps: TypeWriterProps = {
-    staticContent: "I",
+  const typeWriterProps: TypeWriterProps[] = [{
+    staticContent: "",
     staticContentClass: "typed",
     dynamicValuesClass: `${highLighter}`,
-    dynamicValues: [
-      {
-        typeText: "Frontend solutions for websites...",
-        staticBeginning: " develop ",
+    dynamicValues: {
+        typeText: "Frontend solutions with Angular & React.",
+        staticBeginning: "",
       },
-      {
-        typeText: "Backend Web Services and APIs...",
-        staticBeginning: " develop ",
-      },
-      { typeText: "Database and Cache...", staticBeginning: " develop " },
-      {
-        typeText: "Cloud solutions for secure and scalable web hosting...",
-        staticBeginning: " develop ",
-      },
-      { typeText: "Full Stack Developer.", staticBeginning: "'m " },
-    ],
-    typingDelay: 200,
+    typingDelay: 100,
+    startDelay: 10,
     erasingDelay: 100,
     newTextDelay: 2000,
-  };
+  }, {
+    staticContent: "",
+    staticContentClass: "typed",
+    dynamicValuesClass: `${highLighter}`,
+    dynamicValues:
+      {
+        typeText: "Backend Web Services and APIs with .Net Core and NodeJs",
+        staticBeginning: "",
+      },
+    typingDelay: 100,
+    startDelay: 4000,
+    erasingDelay: 100,
+    newTextDelay: 2000,
+  }, {
+    staticContent: "",
+    staticContentClass: "typed",
+    dynamicValuesClass: `${highLighter}`,
+    dynamicValues:  { typeText: "Manage Databases and Cache.", staticBeginning: "" },
+    typingDelay: 100,
+    startDelay: 8000,
+    erasingDelay: 100,
+    newTextDelay: 2000,
+  }, {
+    staticContent: "",
+    staticContentClass: "typed",
+    dynamicValuesClass: `${highLighter}`,
+    dynamicValues: {
+        typeText: "Cloud solutions for secure and scalable web hosting.",
+        staticBeginning: "",
+      },
+    typingDelay: 100,
+    erasingDelay: 100,
+    startDelay: 11000,
+    newTextDelay: 2000,
+  }, {
+    staticContent: "",
+    staticContentClass: "typed",
+    dynamicValuesClass: `${highLighter}`,
+    dynamicValues: { typeText: "Full Stack Developer.", staticBeginning: "" },
+    typingDelay: 100,
+    startDelay: 16000,
+    erasingDelay: 100,
+    newTextDelay: 2000,
+  }];
+
+  const typeNodes: ReactNode[] = [];
+  
+  typeWriterProps.forEach((type) => {
+    typeNodes.push(
+        <Typewriter {...type} />
+    );
+  });
+
   return (
     <Box className="row" name="home">
       <Box
@@ -46,24 +90,24 @@ const HomeLanding = () => {
         aria-label="Quick Introduction"
       >
         <Box className={intro_content}>
-          <h1 style={{ maxWidth: "fit-content", placeSelf: "center" }}>
-            <span data-shadow="Welcome" className={shadowEffect}>
-              Welcome
-            </span>
-            <span className={intro}>I'm Anup Singh</span>
+          
+
+          <Box>
+          <h1 style={{ maxWidth: "fit-content", placeSelf: "left", margin: 0 }}>
+            <span className={intro}>Hey, I'm Anup Singh 👋</span>
           </h1>
 
-          <Box style={{minWidth: "80%", placeSelf:"center"}}>
-            <Box className={typeContainer}>
-              <Typewriter {...typeWriterProps} />
-            </Box>
-            <div style={{ marginTop: "12px", fontSize: "1.1em" }}>
+            <span className={subTitle} >Here's a glimpse of my work:</span>
+            <ul className={typeContainer}>
+              {typeNodes}
+            </ul>
+            <div className={bottomText}>
               Currently, working{" "}
-              <span className={highLighter}>
+              <span style={{color: "rgb(233, 98, 105)"}}>
                 at{" "}
                 <a
                   href="https://hiring.careerbuilder.com/"
-                  style={{ all: "unset", cursor: "pointer" }}
+                  style={{ all: "unset", cursor: "pointer", color: "#e96269" }}
                 >
                   Careerbuilder.com
                 </a>
@@ -71,7 +115,10 @@ const HomeLanding = () => {
               as full-stack developer.
             </div>
           </Box>
-        </Box>
+          <div className={devWorkImage}>
+          <img src="/thumbnails/working-dev-10.svg" style={{width: "100%", height: "100%"}}/>
+        </div>
+        </Box>        
         <ArrowScroll/>
       </Box>
     </Box>

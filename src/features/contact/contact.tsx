@@ -8,7 +8,7 @@ import { whiteA } from "@radix-ui/colors";
 
 export const Contact = () => (
   <Box as="article" className="row" style={{ textAlign: "center" }}>
-    <div style={{ margin: "50px 0 50px 0" }}>
+    <div style={{ margin: "75px 0 50px 0" }}>
       <h2 style={{ margin: 0, padding: 0 }}>Reach Out To Me</h2>
       <p
         style={{

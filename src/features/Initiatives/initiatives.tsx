@@ -20,7 +20,7 @@ export const Initiatives = () => (
         description="🔥 The service can use to render a web-page on server and perform action like web-page to pdf or snapshots etc"
         langList={[{ langClass: "TypeScript", name: "Typescript" }]}
         techTags={["NodeJS", "Express"]}
-        size={2}
+        size="200 KB"
         url="https://github.com/onu-khatri/Pupetter-Service"
       ></GitCards>
 
@@ -40,7 +40,7 @@ export const Initiatives = () => (
           ".Net Core",
           "Angular",
         ]}
-        size={2}
+        size="2.5 MB"
         url="https://github.com/onu-khatri/TripYari"
       ></GitCards>
 
@@ -54,7 +54,7 @@ export const Initiatives = () => (
           { langClass: "JavaScript", name: "JavaScript" },
         ]}
         techTags={["React", "Vite", "HeadLess-UI", "Theme"]}
-        size={2}
+        size="3.5 MB"
         url="https://github.com/onu-khatri/onu-khatri.github.io"
       ></GitCards>
     </ul>

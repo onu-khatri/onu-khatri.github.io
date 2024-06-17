@@ -56,23 +56,8 @@ const LinkItem = ({ ...props }) => (
     </Link>
   </NavigationMenu.Link>
 );
-/*
-const AvatarOpenSymbol = () => (
-  <>
-    <RoundAvatar avatarSize={triggerAvatarSize} /> <DoubleArrowDownIcon />
-  </>
-);*/
 
-export interface TopMenuProps {
-  open: boolean;
-  setOpen: (value: boolean) => void;
-}
-
-const CollapsibleTopMenu = (props: TopMenuProps) => {
-
-  const closeTrigger = () => {
-    props.setOpen(false);
-  }
+const CollapsibleTopMenu = () => {
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -83,13 +68,12 @@ const CollapsibleTopMenu = (props: TopMenuProps) => {
   
   return (
     <div className={stickyMenuContainer}>      
-      <button onClick={closeTrigger} className={avatarButton}>
+      <button className={avatarButton}>
       <AvatarImage avatarSize={avatarSize} src="profile.jpg" alt="Anup Singh"/>
       </button>
       <Collapsible.Root
         className={collapsibleRoot}
-        open={props.open}
-        onOpenChange={props.setOpen}
+        open={true}
       >
         <Collapsible.Content className={collapsibleContent}>
           <div className={menuContent}>

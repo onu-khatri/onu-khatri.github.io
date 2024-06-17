@@ -17,7 +17,7 @@ interface GitCardProp extends PropsWithChildren {
   title: string;
   description: string;
   langList: { name: string; langClass: string }[];
-  size: number;
+  size: string;
   techTags: string[];
   url: string
 }
@@ -63,7 +63,7 @@ export const GitCards = (props: GitCardProp) => {
       <p style={{ fontSize: "1.2em", textAlign: 'justify', margin: '28px 0 25px 0' }}>{props.description}</p>
       <div className={langContainer}>
         <ul className={langList}>{langNodes}</ul>
-        <div>{props.size}&nbsp;MB</div>
+        <div>{props.size}</div>
       </div>
       <ul className={techList}>
         {props.techTags.map((tag) => (

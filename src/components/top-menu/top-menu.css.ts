@@ -75,7 +75,8 @@ export const linkText = style({
 });
 
 export const separatorRoot = style({
-  backgroundColor: whiteA.whiteA12
+  backgroundColor: whiteA.whiteA12,
+  margin: "0 15px"
 });
 
 export const linkData = style({
@@ -128,6 +129,12 @@ export const stickyMenuContainer = style({
   top: "0",
   width: "100%",
   zIndex: "999",
+
+  '@media': {
+    'screen and (max-width: 768px)': {
+      display: "none"
+    }
+  }
 })
 
 export const collapsibleRoot = style({

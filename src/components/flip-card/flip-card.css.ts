@@ -1,7 +1,9 @@
 import { style } from "@vanilla-extract/css";
 
 export const cardContainer = style({
-  width: "365px",
+  minWidth: "360px",
+  width: "calc((100vw - 10vw) / 3.4)",
+  maxWidth: "410px",
   height: "34em",
   margin: "1em",
   perspective: "1500px"
