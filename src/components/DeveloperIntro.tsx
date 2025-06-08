@@ -49,7 +49,7 @@ const DeveloperIntro: React.FC<{ className: string }> = ({ className }) => {
       {/* Buttons */}
       <div className="flex gap-4 mt-6">
         <a
-          href="/assets/Resume_AnupSingh.pdf"
+          href="assets/docs/Anup-Singh-Resume.pdf"
           download
           className="relative inline-flex items-center gap-3 px-6 py-3 rounded-xl border border-blue-600 dark:border-amber-200 text-blue-600 dark:text-amber-200 font-semibold overflow-hidden group hover:bg-blue-600 dark:hover:bg-amber-200 hover:text-white dark:hover:text-black transition duration-300 ease-in-out"
         >
