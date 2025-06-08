@@ -9,21 +9,27 @@ const DeveloperIntro: React.FC<{ className: string }> = ({ className }) => {
       className={`flex flex-col items-center text-center sm:px-6 rounded-lg drop-shadow-[0_0_6px_3px_rgba(0,0,0,0.3)] w-full max-h-fit bg-[hsl(var(--background))] sm:min-w-1/2 ${className}`}
     >
       {/* Avatar using Radix */}
-      <Avatar.Root className="w-52 h-52 mb-4 rounded-full border-4 border-blue-500 overflow-hidden">
+      <Avatar.Root className="w-32 h-32 md:w-40 md:h-40 rounded-full ring-4 ring-primary/50 dark:ring-primary/60 shadow-xl overflow-hidden hover:scale-105 hover:brightness-110 transition-transform duration-300">
         <Avatar.Image
-          src="/profile.jpg" // Replace with actual image path
-          alt="John Anderson"
+          src="assets/thumbnails/My-face-2.png"
+          alt="Anup Singh"
           className="w-full h-full object-cover"
         />
-        <Avatar.Fallback className="flex items-center justify-center w-full h-full bg-gray-200 text-gray-600">
-          JA
+        <Avatar.Fallback
+          delayMs={400}
+          className="flex items-center justify-center w-full h-full bg-muted text-muted-foreground font-semibold text-3xl uppercase"
+        >
+          AS
         </Avatar.Fallback>
       </Avatar.Root>
-      {/* Name and Title */}
-      <h1 className="text-3xl sm:text-6xl font-bold text-gray-900 dark:text-amber-50">
+
+      {/* Name */}
+      <h1 className="text-2xl sm:text-5xl font-bold text-foreground dark:text-foreground mt-4">
         Anup Singh
       </h1>
-      <p className="text-blue-600 font-medium mt-2 text-lg sm:text-xl dark:text-blue-300">
+
+      {/* Title */}
+      <p className="text-base sm:text-lg mt-3 font-medium text-muted-foreground dark:text-muted-foreground">
         Senior Full Stack Developer
       </p>
       {/* Highlights List */}
