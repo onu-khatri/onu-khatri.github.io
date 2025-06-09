@@ -118,7 +118,7 @@ export const ExperienceTimeline = () => {
               </h4>
 
               {/* Description */}
-              <div className="text-gray-700 dark:text-gray-100 text-justify text-base leading-relaxed space-y-2">
+              <div className="text-gray-700 dark:text-gray-100 text-justify text-lg leading-relaxed space-y-2">
                 {exp.description.map((para, i) =>
                   Array.isArray(para) ? (
                     <ul key={i} className="list-disc ml-5 space-y-1">

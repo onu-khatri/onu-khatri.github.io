@@ -7,6 +7,7 @@ import { ExperienceTimeline } from "../components/Expierence";
 import { Projects } from "../pages/Projects";
 import { Initiatives } from "../components/GitHubProjects";
 import { Contact } from "../components/contact";
+import { MediumArticles } from "../pages/MediumArticles";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <ExperienceTimeline />
         <Projects />
         <Initiatives />
+        <MediumArticles />
         <Contact />
       </main>
     </div>

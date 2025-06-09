@@ -30,7 +30,7 @@ export const GitCards = (props: GitCardProp) => {
           {props.title}
         </h3>
 
-        <p className="text-zinc-600 dark:text-zinc-300 text-base mt-4 mb-6 leading-relaxed text-justify">
+        <p className="text-zinc-600 dark:text-zinc-300 text-lg mt-4 mb-6 leading-relaxed text-justify">
           {props.description}
         </p>
 

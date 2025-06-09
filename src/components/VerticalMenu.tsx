@@ -7,6 +7,7 @@ import {
   StackIcon,
   EnvelopeOpenIcon,
   CodeIcon,
+  ReaderIcon,
 } from "@radix-ui/react-icons";
 import { ThemeToggle } from "./ThemeToggle";
 import { motion, useScroll } from "framer-motion";
@@ -18,6 +19,7 @@ const menuItems = [
   { label: "Experience", icon: <StackIcon />, href: "#experienceSection" },
   { label: "Projects", icon: <RocketIcon />, href: "#projectsSection" },
   { label: "GitHub", icon: <GitHubLogoIcon />, href: "#initiativeSection" },
+  { label: "Blogs", icon: <ReaderIcon />, href: "#mediumArticles" },
   { label: "Contact", icon: <EnvelopeOpenIcon />, href: "#contactSection" },
 ];
 
@@ -67,8 +69,8 @@ export const VerticalSideMenu = () => {
     return () => observer.disconnect();
   }, []);
 
-  const topMobileItems = menuItems.slice(0, 4);
-  const bottomMobileItems = menuItems.slice(4);
+  const topMobileItems = menuItems.slice(0, 5);
+  const bottomMobileItems = menuItems.slice(5);
 
   return (
     <>
