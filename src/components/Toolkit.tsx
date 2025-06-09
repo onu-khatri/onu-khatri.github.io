@@ -24,14 +24,18 @@ import sassIcon from "../assets/icons/sass-avatar.svg?react";
 import gdprIcon from "../assets/icons/gdpr.svg?react";
 import accessibilityIcon from "../assets/icons/accessibility.svg?react";
 import githubIcon from "../assets/icons/github.svg?react";
+import springBootIcon from "../assets/icons/spring-boot.svg?react";
+import nextjsIcon from "../assets/icons/nextjs.svg?react";
 import { motion } from "framer-motion";
 
 const skills = {
   Backend: [
     { name: ".NET Core", icon: DotNetIcon, level: 9 },
     { name: "C#", icon: CSharpIcon, level: 9 },
+    { name: "Node-JS", icon: nodeJsIcon, level: 7 },
+    { name: "Spring Boot", icon: springBootIcon, level: 3 },
+    { name: "Next-JS", icon: nextjsIcon, level: 3 },
     { name: "GRPC", icon: GrpcIcon, level: 4 },
-    { name: "NodeJS", icon: nodeJsIcon, level: 7 },
   ],
   "Cloud & DevOps": [
     { name: "AWS", icon: awsIcon, level: 7 },

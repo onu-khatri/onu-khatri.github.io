@@ -16,6 +16,22 @@ export const ThemeToggle = ({ onlyIcon }: { onlyIcon: boolean }) => {
     }
   }, [darkMode]);
 
+  useEffect(() => {
+    const match = window.matchMedia("(prefers-color-scheme: dark)");
+    const updateTheme = () => {
+      if (match.matches) {
+        setDarkMode(true);
+      } else {
+        setDarkMode(false);
+      }
+    };
+
+    updateTheme(); // initial
+    match.addEventListener("change", updateTheme); // listen for change
+
+    return () => match.removeEventListener("change", updateTheme);
+  }, []);
+
   return (
     <button
       onClick={() => setDarkMode((prev) => !prev)}

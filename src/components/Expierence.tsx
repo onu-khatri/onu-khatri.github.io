@@ -11,12 +11,19 @@ const experiences = [
     logo: "assets/icons/cb.png",
     date: "June 2020 - Current",
     description: [
-      "CareerBuilder is an employment website that operates in the United States and Europe. Here, We use data-driven technology and personalized tools to help match employers with great candidates based on individual wants, needs, and unique skill sets. I'm working on the Talent Discovery Platform of CareerBuilder.com that provides solutions and services to employers and recruiters. Recruiters can perform semantic search for the candidates, send messages and jobs from the system, and clients can also add candidates to their ATS.",
+      "CareerBuilder is an employment website that operates in the United States and Europe. Here, We use data-driven technology and personalized tools to help match employers with great candidates based on individual wants, needs, and unique skill sets.",
       "We recently developed two new solutions: Pay Per Resume and Pay For Performance.",
       [
         '"Pay Per Resume" is an innovative approach to recruitment that allows clients and their recruitment team to pay only for the resumes they view instead of a monthly license.',
         '"Pay For Performance" offers a flexible way to advertise all client jobs, aligning cost with results. Clients only spend when candidates apply.',
       ],
+    ],
+    contribution: [
+      "Led a team of 5 engineers, ensuring skill development, code quality, and project optimization.",
+      "Enhanced employer and recruiter experiences by contributing to the Talent Discovery Platform.",
+      "Developed 'Pay Per Resume' and 'Pay for Performance' models, increasing revenue by 10%.",
+      "Reduced AWS costs and cleaned 57M+ data, saving 20% in revenue through quota validation improvements.",
+      "Implemented WCAG 2.1 standards, improving website accessibility and expanding the user base.",
     ],
   },
   {
@@ -26,13 +33,19 @@ const experiences = [
     date: "Nov 2015 - Jun 2020",
     description: [
       "InspopIndia.com was a branch of Admiral Group Plc in India to provide the technical support for the Insurance based products like Rastreator. Rastreator.com is Spain’s most popular online insurance broker and price comparison platform. Rastreator.com Provide different comparison products for Car, Telephony, Travel, Energy and Finance.",
-      "I worked as a Senior Web Developer for 7 projects of company. I provided support for Rastreator.com and upgraded their projects from old technologies to .net core and Angular like Car-Insurance and Telephony. I also developed new projects from scratch Like:",
+      "I developed new projects from scratch Like:",
       [
         "Wakeel.com – It is an insurance comparison project which provide services for Gulf and MENA countries",
         "MultiProduct – Amazon affiliate for car products",
         "Viajes – Booking.com & Kayak.com affiliate",
         "adopta-un-perro.rastreator.com – Dog adoption welfare project",
       ],
+    ],
+    contribution: [
+      "Built API integrations with minimal resources, aligning with client and business needs.",
+      "Introduced test-driven development, reducing bugs by 27%, and guided team skill upgrades.",
+      "Modernized legacy projects by redesigning with .NET Core, Angular, and migrating to microservices.",
+      "Delivered key projects (Wakeel.com, Multiproduct, Viajes), expanding service offerings by 12%.",
     ],
   },
   {
@@ -41,9 +54,13 @@ const experiences = [
     logo: "assets/icons/E2E.png",
     date: "Nov 2013 - Nov 2015",
     description: [
-      "Worked as a Junior Software developer on .Net platform and handled the top three revenue generating projects of organization. I Created survey based web-projects for Nickelodeon and The Guardian which show the comparison and statics between different brand of UK, US and Aus. Also developed a cycle-training project for UK users that helped organization to register their users online as well as track the learning performance.",
-      "In projects, we also provided D3.js based charts. User were able to download reports in pptx and pdf formats which we created using OpenXML 2.0. I also wrote a library based on OpenXML that could generate Powerpoint Presentations files with dynamic data",
-      "In addition to client projects, I also developed an internal MIS project that worked as HR panel, Leave Management System, Task Management System as well as Project Management System",
+      "Worked as a Junior Software developer on .Net platform and handled the top three revenue generating projects of organization. I Created survey based web-projects for Nickelodeon and The Guardian which show the comparison and statics between different brand of UK, US and Aus.",
+    ],
+    contribution: [
+      "Automated data fetching in NodeJS, cutting report generation time from 5 hours to 30 minutes.",
+      "Managed top revenue-generating projects, microservices, and frameworks.",
+      "Developed survey-based web projects and a cycle-training application.",
+      "Create a reporting project for theguardian.com and integrate D3.JS to create the dynamic charts.",
     ],
   },
   /* {
@@ -121,7 +138,7 @@ export const ExperienceTimeline = () => {
               <div className="text-gray-700 dark:text-gray-100 text-justify text-lg leading-relaxed space-y-2">
                 {exp.description.map((para, i) =>
                   Array.isArray(para) ? (
-                    <ul key={i} className="list-disc ml-5 space-y-1">
+                    <ul key={i} className="list-disc ml-5 sm:ml-10 space-y-1">
                       {para.map((li, j) => (
                         <li key={j}>{li}</li>
                       ))}
@@ -130,6 +147,17 @@ export const ExperienceTimeline = () => {
                     <p key={i}>{para}</p>
                   )
                 )}
+              </div>
+
+              <div className="mt-8">
+                <h4 className="text-gray-800 mb-2 text-lg font-semibold dark:text-amber-100">
+                  My Contribution:
+                </h4>
+                <ul className="ml-5 sm:ml-10 list-disc text-gray-700 dark:text-gray-100 text-justify text-lg leading-relaxed space-y-2">
+                  {exp.contribution.map((para, i) => (
+                    <li key={i}>{para}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
