@@ -28,39 +28,39 @@ import { motion } from "framer-motion";
 
 const skills = {
   Backend: [
-    { name: ".NET Core", icon: DotNetIcon, level: 95 },
-    { name: "C#", icon: CSharpIcon, level: 95 },
-    { name: "GRPC", icon: GrpcIcon, level: 80 },
-    { name: "NodeJS", icon: nodeJsIcon, level: 90 },
+    { name: ".NET Core", icon: DotNetIcon, level: 9 },
+    { name: "C#", icon: CSharpIcon, level: 9 },
+    { name: "GRPC", icon: GrpcIcon, level: 4 },
+    { name: "NodeJS", icon: nodeJsIcon, level: 7 },
   ],
   "Cloud & DevOps": [
-    { name: "AWS", icon: awsIcon, level: 70 },
-    { name: "Docker", icon: dockerIcon, level: 80 },
-    { name: "GitHub", icon: githubIcon, level: 90 },
-    { name: "RabbitMQ", icon: rabbitMQIcon, level: 60 },
+    { name: "AWS", icon: awsIcon, level: 7 },
+    { name: "Docker", icon: dockerIcon, level: 3 },
+    { name: "GitHub", icon: githubIcon, level: 5 },
+    { name: "RabbitMQ", icon: rabbitMQIcon, level: 6 },
   ],
   Databases: [
-    { name: "SQL", icon: sqlIcon, level: 90 },
-    { name: "PostgreSql", icon: postgresqlIcon, level: 75 },
-    { name: "MySql", icon: mysqlIcon, level: 80 },
-    { name: "Redis", icon: redisIcon, level: 70 },
+    { name: "SQL", icon: sqlIcon, level: 7 },
+    { name: "PostgreSql", icon: postgresqlIcon, level: 5 },
+    { name: "MySql", icon: mysqlIcon, level: 7 },
+    { name: "Redis", icon: redisIcon, level: 7 },
   ],
   Frontend: [
-    { name: "Angular", icon: angularIcon, level: 85 },
-    { name: "React", icon: reactIcon, level: 90 },
-    { name: "Javascript", icon: javascriptIcon, level: 95 },
-    { name: "Typescript", icon: typescriptIcon, level: 90 },
-    { name: "Saas", icon: sassIcon, level: 70 },
-    { name: "CSS 3", icon: css3Icon, level: 85 },
-    { name: "HTML 5", icon: html5Icon, level: 90 },
+    { name: "Angular", icon: angularIcon, level: 9 },
+    { name: "React", icon: reactIcon, level: 7 },
+    { name: "Javascript", icon: javascriptIcon, level: 8 },
+    { name: "Typescript", icon: typescriptIcon, level: 9 },
+    { name: "Saas", icon: sassIcon, level: 7 },
+    { name: "CSS 3", icon: css3Icon, level: 7 },
+    { name: "HTML 5", icon: html5Icon, level: 7 },
   ],
   Other: [
     {
       name: "Accessibility",
       icon: accessibilityIcon,
-      level: 70,
+      level: 7,
     },
-    { name: "GDPR", icon: gdprIcon, level: 65 },
+    { name: "GDPR", icon: gdprIcon, level: 5 },
   ],
 };
 
@@ -109,20 +109,20 @@ export const Toolkit = () => {
                       <div
                         className="h-1.5 rounded"
                         style={{
-                          width: `${level}%`,
+                          width: `${level * 10}%`,
                           backgroundColor:
-                            level >= 90
+                            level >= 8
                               ? "#22c55e" // green
-                              : level >= 70
+                              : level >= 5
                               ? "#facc15" // yellow
                               : "#f87171", // red
                         }}
                       />
                     </div>
                     <div className="text-xs text-center mt-1 text-gray-500 dark:text-gray-300">
-                      {level >= 90
+                      {level >= 8
                         ? "Expert"
-                        : level >= 70
+                        : level >= 5
                         ? "Advanced"
                         : "Intermediate"}
                     </div>

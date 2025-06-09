@@ -8,7 +8,7 @@ interface TypingListProps {
   className?: string;
 }
 
-const TypingList: React.FC<TypingListProps> = ({
+export const TypingList: React.FC<TypingListProps> = ({
   items,
   className,
   typingSpeed = 100,
@@ -89,5 +89,3 @@ const TypingList: React.FC<TypingListProps> = ({
     </div>
   );
 };
-
-export default TypingList;

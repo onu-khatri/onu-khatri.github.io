@@ -1,9 +1,9 @@
 import "./App.css";
-import VerticalSideMenu from "../components/VerticalMenu";
+import { VerticalSideMenu } from "../components/VerticalMenu";
 import { HomePage } from "../pages/home";
 import { AboutMe } from "../components/AboutMe";
 import { Toolkit } from "../components/Toolkit";
-import ExperienceTimeline from "../components/Expierence";
+import { ExperienceTimeline } from "../components/Expierence";
 import { Projects } from "../pages/Projects";
 import { Initiatives } from "../components/GitHubProjects";
 import { Contact } from "../components/contact";

@@ -69,7 +69,7 @@ const experiences = [
   }, */
 ];
 
-export default function ExperienceTimeline() {
+export const ExperienceTimeline = () => {
   return (
     <motion.section
       id="experienceSection"
@@ -137,4 +137,4 @@ export default function ExperienceTimeline() {
       </div>
     </motion.section>
   );
-}
+};

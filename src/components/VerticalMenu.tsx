@@ -21,7 +21,7 @@ const menuItems = [
   { label: "Contact", icon: <EnvelopeOpenIcon />, href: "#contactSection" },
 ];
 
-const VerticalSideMenu = () => {
+export const VerticalSideMenu = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [activeSection, setActiveSection] = useState("homePageSection");
   const { scrollYProgress } = useScroll();
@@ -166,5 +166,3 @@ const VerticalSideMenu = () => {
     </>
   );
 };
-
-export default VerticalSideMenu;

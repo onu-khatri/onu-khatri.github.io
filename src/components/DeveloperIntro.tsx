@@ -1,9 +1,11 @@
 import * as React from "react";
 import * as Avatar from "@radix-ui/react-avatar";
-import TypingList from "./TypingList";
+import { TypingList } from "./TypingList";
 import { DownloadIcon } from "@radix-ui/react-icons";
 
-const DeveloperIntro: React.FC<{ className: string }> = ({ className }) => {
+export const DeveloperIntro: React.FC<{ className: string }> = ({
+  className,
+}) => {
   return (
     <div
       className={`flex flex-col items-center text-center sm:px-6 rounded-lg drop-shadow-[0_0_6px_3px_rgba(0,0,0,0.3)] w-full max-h-fit bg-[hsl(var(--background))] sm:min-w-1/2 ${className}`}
@@ -61,5 +63,3 @@ const DeveloperIntro: React.FC<{ className: string }> = ({ className }) => {
     </div>
   );
 };
-
-export default DeveloperIntro;

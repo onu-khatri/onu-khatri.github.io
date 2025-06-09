@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import DeveloperIntro from "../components/DeveloperIntro";
+import { DeveloperIntro } from "../components/DeveloperIntro";
 
 export const HomePage = () => {
   return (
