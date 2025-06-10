@@ -24,16 +24,9 @@ export const AboutMe = () => {
             12 years of industry experience building fast, scalable, and
             user-focused web applications. I specialize in both frontend and
             backend development, with strong proficiency in .NET Core, Node.js,
-            Angular, and React — allowing me to own the full development
-            lifecycle from architecture to deployment.
-          </p>
-
-          <p className="my-6 text-justify  text-base sm:text-lg">
-            As a full-stack developer, I am well-versed in .NET Core and NodeJS
-            for back-end support. Also, works on Javascript and its frameworks
-            such as Angular and React js. I am able to take ideas from
-            conception to completion, handling the entire process from start to
-            finish.
+            Angular, and React. My expertise allows me to take ideas from
+            conception to completion — owning the entire development lifecycle,
+            from architecture and implementation to deployment.
           </p>
           <p className="my-6 text-justify  text-base sm:text-lg">
             Over the years, I’ve worked across diverse domains including
@@ -66,11 +59,11 @@ export const AboutMe = () => {
             </li>
           </ul>
           <p className="my-6 text-justify  text-base sm:text-lg">
-            Beyond my day job, I’m an active GitHub contributor. I enjoy
-            exploring new tech and building small tools, components, and
-            utilities that solve real problems. Some of these started as side
-            projects for learning, and several are now production-ready and used
-            in real-world applications. You can explore them&nbsp;
+            Beyond my day job, I enjoy exploring new tech and building small
+            tools, components, and utilities that solve real problems. Some of
+            these started as side projects for learning, and several are now
+            production-ready and used in real-world applications. You can
+            explore them&nbsp;
             <a
               href="https://github.com/onu-khatri"
               className="text-blue-400 hover:underline inline-flex items-center gap-1"
