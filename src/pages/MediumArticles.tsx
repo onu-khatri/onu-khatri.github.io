@@ -5,6 +5,17 @@ import { motion } from "framer-motion";
 
 const articles = [
   {
+    title: "Puppeteer Isn’t Meant for PDFs — Here’s Why",
+    link: "https://medium.com/@onu.khatri/puppeteer-isnt-meant-for-pdfs-here-s-why-1e3a4419263f",
+    pubDate: "2025-06-10",
+    tags: ["Puppeteer", "Nodejs", "Html To Pdf", "Best Practices"],
+    readingTime: "6 min read",
+    image:
+      "https://miro.medium.com/v2/resize:fit:828/format:webp/1*nbZ8xyxUwBr-CgZC5MxB0Q.png",
+    excerpt:
+      "Puppeteer is one of the bests tools the web automation space. It provides a Node.js interface to control headless Chrome or Chromium browsers — ideal for tasks like end-to-end testing, web scraping, and UI automation. But lately, developers have started using Puppeteer for something it wasn’t really designed for: Generating PDFs from web pages.",
+  },
+  {
     title: "Pre-Planning of My React Portfolio",
     link: "https://medium.com/@onu.khatri/pre-planning-of-my-react-portfolio-d4befc26d825",
     pubDate: "2025-04-20",

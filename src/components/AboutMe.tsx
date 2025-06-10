@@ -44,8 +44,10 @@ export const AboutMe = () => {
             infrastructures.
           </p>
 
-          <ul className="text-lg">
-            Here’s what I bring to the table:
+          <div className="text-lg mb-2">
+            <span>Here’s what I bring to the table:</span>
+          </div>
+          <ul className="text-lg pl-5 sm:pl-10">
             <li>
               💡 A strong problem-solving mindset and ability to simplify
               complexity into clean, maintainable code.{" "}
