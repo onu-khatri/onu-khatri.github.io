@@ -10,6 +10,12 @@ interface MediumArticleType {
   excerpt?: string;
 }
 
+const formattedDate = (date: Date) =>
+  new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    year: "numeric",
+  }).format(date);
+
 export const MediumArticle = ({ article }: { article: MediumArticleType }) => {
   return (
     <>
@@ -51,7 +57,7 @@ export const MediumArticle = ({ article }: { article: MediumArticleType }) => {
           <span>⏱️ {article.readingTime}</span>
           <span className="flex items-center gap-1">
             <CalendarIcon className="w-4 h-4" />
-            {new Date(article.pubDate).toLocaleDateString()}
+            {formattedDate(new Date(article.pubDate))}
           </span>
         </div>
       </div>
