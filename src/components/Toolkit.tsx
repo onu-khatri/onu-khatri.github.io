@@ -41,17 +41,17 @@ const skills = {
     { name: "AWS", icon: awsIcon, level: 7 },
     { name: "Docker", icon: dockerIcon, level: 3 },
     { name: "GitHub", icon: githubIcon, level: 5 },
-    { name: "RabbitMQ", icon: rabbitMQIcon, level: 6 },
+    { name: "RabbitMQ", icon: rabbitMQIcon, level: 5 },
   ],
   Databases: [
     { name: "SQL", icon: sqlIcon, level: 7 },
     { name: "PostgreSql", icon: postgresqlIcon, level: 5 },
-    { name: "MySql", icon: mysqlIcon, level: 7 },
+    { name: "MySql", icon: mysqlIcon, level: 5 },
     { name: "Redis", icon: redisIcon, level: 7 },
   ],
   Frontend: [
     { name: "Angular", icon: angularIcon, level: 9 },
-    { name: "React", icon: reactIcon, level: 7 },
+    { name: "React", icon: reactIcon, level: 5 },
     { name: "Javascript", icon: javascriptIcon, level: 8 },
     { name: "Typescript", icon: typescriptIcon, level: 9 },
     { name: "Saas", icon: sassIcon, level: 7 },
@@ -111,24 +111,28 @@ export const Toolkit = () => {
                   <div className="w-full mt-2">
                     <div className="h-1.5 bg-neutral-300 dark:bg-neutral-600 rounded">
                       <div
-                        className="h-1.5 rounded"
+                        className={`h-1.5 rounded transition-all duration-300 ${
+                          level > 8
+                            ? "bg-gradient-to-r from-amber-400 to-orange-500"
+                            : level > 5
+                            ? "bg-gradient-to-r from-emerald-500 to-emerald-700"
+                            : level > 3
+                            ? "bg-gradient-to-r from-teal-400 to-teal-600"
+                            : "bg-gradient-to-r from-sky-300 to-sky-500"
+                        }`}
                         style={{
                           width: `${level * 10}%`,
-                          backgroundColor:
-                            level >= 8
-                              ? "#22c55e" // green
-                              : level >= 5
-                              ? "#facc15" // yellow
-                              : "#f87171", // red
                         }}
                       />
                     </div>
                     <div className="text-xs text-center mt-1 text-gray-500 dark:text-gray-300">
-                      {level >= 8
+                      {level > 8
                         ? "Expert"
-                        : level >= 5
+                        : level > 5
                         ? "Advanced"
-                        : "Intermediate"}
+                        : level > 3
+                        ? "Intermediate"
+                        : "beginners"}
                     </div>
                   </div>
                 </div>
