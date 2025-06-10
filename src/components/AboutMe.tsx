@@ -19,7 +19,7 @@ export const AboutMe = () => {
       <H2Heading>About Me:</H2Heading>
       <div className="flex flex-wrap justify-around w-full">
         <div className="max-w-7xl self-center">
-          <p className="my-6 text-justify text-lg">
+          <p className="my-6 text-justify text-base sm:text-lg">
             I’m a dedicated and curious Full-Stack Software Engineer with over
             12 years of industry experience building fast, scalable, and
             user-focused web applications. I specialize in both frontend and
@@ -28,14 +28,14 @@ export const AboutMe = () => {
             lifecycle from architecture to deployment.
           </p>
 
-          <p className="my-6 text-justify  text-lg">
+          <p className="my-6 text-justify  text-base sm:text-lg">
             As a full-stack developer, I am well-versed in .NET Core and NodeJS
             for back-end support. Also, works on Javascript and its frameworks
             such as Angular and React js. I am able to take ideas from
             conception to completion, handling the entire process from start to
             finish.
           </p>
-          <p className="my-6 text-justify  text-lg">
+          <p className="my-6 text-justify  text-base sm:text-lg">
             Over the years, I’ve worked across diverse domains including
             job-tech, insurance, travel, and market research — consistently
             delivering high-impact features and performance improvements. I’ve
@@ -44,10 +44,10 @@ export const AboutMe = () => {
             infrastructures.
           </p>
 
-          <div className="text-lg mb-2">
+          <div className="text-base sm:text-lg mb-2">
             <span>Here’s what I bring to the table:</span>
           </div>
-          <ul className="text-lg pl-5 sm:pl-10">
+          <ul className="text-base sm:text-lg pl-5 sm:pl-10">
             <li>
               💡 A strong problem-solving mindset and ability to simplify
               complexity into clean, maintainable code.{" "}
@@ -65,7 +65,7 @@ export const AboutMe = () => {
               tools, patterns, and practices.
             </li>
           </ul>
-          <p className="my-6 text-justify  text-lg">
+          <p className="my-6 text-justify  text-base sm:text-lg">
             Beyond my day job, I’m an active GitHub contributor. I enjoy
             exploring new tech and building small tools, components, and
             utilities that solve real problems. Some of these started as side
@@ -79,14 +79,14 @@ export const AboutMe = () => {
             </a>
           </p>
 
-          <p className="text-justify  my-6 text-lg">
+          <p className="text-justify  my-6 text-base sm:text-lg">
             Whether you're a business owner looking to get started on a web or
             app development project, a developer looking to collaborate on
             something cool, or just wanting to say hi, shoot me a message and
             let's work together.
           </p>
 
-          <p className=" mt-6 mb-0 py-[8px] text-lg">
+          <p className=" mt-6 mb-0 py-[8px] text-base sm:text-lg">
             For more details on this part of my experience,{" "}
             <a
               target="_blank"
@@ -98,7 +98,7 @@ export const AboutMe = () => {
             </a>
           </p>
 
-          <div className="flex gap-5 mt-1 items-center text-lg">
+          <div className="flex gap-5 mt-1 items-center text-base sm:text-lg">
             <div
               itemScope
               itemType="https://schema.org/email"

@@ -31,7 +31,7 @@ export const DeveloperIntro: React.FC<{ className: string }> = ({
       </h1>
 
       {/* Title */}
-      <p className="text-base sm:text-lg mt-3 font-medium text-muted-foreground dark:text-muted-foreground">
+      <p className="text-base sm:text-base sm:text-lg mt-3 font-medium text-muted-foreground dark:text-muted-foreground">
         Senior Full Stack Developer
       </p>
       {/* Highlights List */}

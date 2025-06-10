@@ -120,7 +120,7 @@ export const ExperienceTimeline = () => {
                     />
                   </Avatar>
                   <div className="text-left">
-                    <h3 className="text-lg sm:text-xl font-semibold text-blue-700 dark:text-blue-400">
+                    <h3 className="text-base sm:text-lg sm:text-xl font-semibold text-blue-700 dark:text-blue-400">
                       {exp.title}
                     </h3>
                     <div className="flex justify-start sm:justify-start text-sm sm:text-base text-gray-500 dark:text-gray-300 mt-1">
@@ -136,7 +136,7 @@ export const ExperienceTimeline = () => {
                 </h4>
 
                 {/* Description */}
-                <div className="text-gray-700 dark:text-gray-100 text-justify text-lg leading-relaxed space-y-2">
+                <div className="text-gray-700 dark:text-gray-100 text-justify text-base sm:text-lg leading-relaxed space-y-2">
                   {exp.description.map((para, i) =>
                     Array.isArray(para) ? (
                       <ul key={i} className="list-disc ml-5 sm:ml-10 space-y-1">
@@ -151,10 +151,10 @@ export const ExperienceTimeline = () => {
                 </div>
 
                 <div className="mt-8">
-                  <h4 className="text-gray-800 mb-2 text-lg font-semibold dark:text-amber-100">
+                  <h4 className="text-gray-800 mb-2 text-base sm:text-lg font-semibold dark:text-amber-100">
                     My Contribution:
                   </h4>
-                  <ul className="ml-5 sm:ml-10 list-disc text-gray-700 dark:text-gray-100 text-justify text-lg leading-relaxed space-y-2">
+                  <ul className="ml-5 sm:ml-10 list-disc text-gray-700 dark:text-gray-100 text-justify text-base sm:text-lg leading-relaxed space-y-2">
                     {exp.contribution.map((para, i) => (
                       <li key={i}>{para}</li>
                     ))}

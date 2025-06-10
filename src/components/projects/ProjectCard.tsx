@@ -171,7 +171,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             {title}
           </h3>
 
-          <p className="text-lg text-neutral-700 dark:text-neutral-200 mb-4">
+          <p className="text-base sm:text-lg text-neutral-700 dark:text-neutral-200 mb-4">
             {description}
           </p>
 

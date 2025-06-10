@@ -62,7 +62,7 @@ export const MediumArticles = () => (
           <ReaderIcon className="text-primary inline-block mr-3 h-12 w-12" />
           Medium Articles
         </H2Heading>
-        <p className="text-muted-foreground text-lg leading-relaxed">
+        <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
           Here are a few of my latest Medium articles, where I share insights,
           lessons, and ideas from my journey as a developer. I enjoy writing
           content that helps and inspires fellow developers and sharing personal

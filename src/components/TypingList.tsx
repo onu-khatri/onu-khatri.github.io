@@ -77,14 +77,14 @@ export const TypingList: React.FC<TypingListProps> = ({
       {keepPrevious && completedItems.length > 0 && (
         <ul className="list-none">
           {completedItems.map((item, i) => (
-            <li key={i} className="py-3 text-lg text-justify">
+            <li key={i} className="py-3 text-base sm:text-lg text-justify">
               {item}
             </li>
           ))}
         </ul>
       )}
       {displayedText && (
-        <div className="text-left text-lg">{displayedText}</div>
+        <div className="text-left text-base sm:text-lg">{displayedText}</div>
       )}
     </div>
   );

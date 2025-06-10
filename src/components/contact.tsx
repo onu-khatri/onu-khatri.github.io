@@ -18,7 +18,7 @@ export const Contact = () => (
       <h2 className="text-4xl font-bold text-zinc-900 dark:text-white mb-3">
         Reach Out To Me
       </h2>
-      <p className="text-lg text-zinc-600 dark:text-zinc-400 mb-12">
+      <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 mb-12">
         DISCUSS A PROJECT OR JUST WANT TO SAY HI?
       </p>
 

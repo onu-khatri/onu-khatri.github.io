@@ -83,14 +83,14 @@ export const Toolkit = () => {
         <DesktopIcon height={25} width={25} className="ml-5 inline-block" />
       </H2Heading>
 
-      <div className="space-y-10 px-4 text-base sm:text-lg font-medium text-neutral-900 dark:text-gray-100">
+      <div className="space-y-10 px-4 text-base sm:text-base sm:text-lg font-medium text-neutral-900 dark:text-gray-100">
         {Object.entries(skills).map(([group, items]) => (
           <div
             key={group}
             className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6"
           >
             {/* Group Name */}
-            <div className="w-36 shrink-0 text-neutral-700 dark:text-gray-200 text-lg font-semibold pt-2">
+            <div className="w-36 shrink-0 text-neutral-700 dark:text-gray-200 text-base sm:text-lg font-semibold pt-2">
               {group}:
             </div>
 

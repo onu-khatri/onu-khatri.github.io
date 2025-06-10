@@ -57,7 +57,7 @@ export const MediumArticle = ({ article }: { article: MediumArticleType }) => {
       </div>
 
       {/* Right: Excerpt */}
-      <div className="md:col-span-5 text-lg text-muted-foreground leading-relaxed text-justify">
+      <div className="md:col-span-5 text-base sm:text-lg text-muted-foreground leading-relaxed text-justify">
         {article.excerpt}
       </div>
     </>
