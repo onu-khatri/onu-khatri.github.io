@@ -1,17 +1,5 @@
 import { CubeIcon } from "@radix-ui/react-icons";
-import React from "react";
-export type GitCardProp = {
-  className?: string;
-  titleContainerClass?: string;
-  contentContainerClass?: string;
-  title: string;
-  description: string;
-  langList: { name: string; langClass: string }[];
-  size: string;
-  techTags: string[];
-  url: string;
-  children?: React.ReactNode;
-};
+import type { GitCardProp } from "../data/githubProjects";
 
 export const GitCards = (props: GitCardProp) => {
   return (

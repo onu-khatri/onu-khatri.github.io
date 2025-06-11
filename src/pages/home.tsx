@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { DeveloperIntro } from "../components/DeveloperIntro";
+import { developerInfo } from "../data/developerInfo";
 
 export const HomePage = () => {
   return (
@@ -13,7 +14,7 @@ export const HomePage = () => {
     >
       <div className="w-full grid grid-cols-1 2xl:grid-cols-[60%_40%] gap-10 items-center">
         {/* Left: Developer Intro */}
-        <DeveloperIntro className="" />
+        <DeveloperIntro developer={developerInfo} className="" />
         {/* Right: Desktop-only Image */}
         <div className="hidden 2xl:block">
           <img

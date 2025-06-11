@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 type Timer = {
   years: number;
@@ -9,8 +9,8 @@ type Timer = {
   seconds: number;
 };
 
-const calculateTimer = (): Timer => {
-  const past = Date.parse("2013-11-11 00:00:00");
+const calculateTimer = (date: string): Timer => {
+  const past = Date.parse(date);
   const now = Date.now();
   const diff = now - past;
 
@@ -31,12 +31,16 @@ const calculateTimer = (): Timer => {
   };
 };
 
-export const ExperienceTimer: React.FC = () => {
-  const [timer, setTimer] = useState<Timer>(calculateTimer());
+export const ExperienceTimer = ({
+  careerStartDate,
+}: {
+  careerStartDate: string;
+}) => {
+  const [timer, setTimer] = useState<Timer>(calculateTimer(careerStartDate));
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimer(calculateTimer());
+      setTimer(calculateTimer(careerStartDate));
     }, 1000);
     return () => clearInterval(interval);
   }, []);

@@ -5,8 +5,9 @@ import {
 } from "@radix-ui/react-icons";
 import { H2Heading } from "./UI/H2Heading";
 import { motion } from "framer-motion";
+import type { AboutMeProps } from "../data/userInfo";
 
-export const AboutMe = () => {
+export const AboutMe: React.FC<AboutMeProps> = ({ user }) => {
   return (
     <motion.section
       id="aboutMeSection"
@@ -19,72 +20,47 @@ export const AboutMe = () => {
       <H2Heading>About Me:</H2Heading>
       <div className="flex flex-wrap justify-around w-full">
         <div className="max-w-7xl self-center">
-          <p className="my-6 text-justify text-base sm:text-lg">
-            I’m a dedicated and curious Full-Stack Software Engineer with over
-            12 years of industry experience building fast, scalable, and
-            user-focused web applications. I specialize in both frontend and
-            backend development, with strong proficiency in .NET Core, Node.js,
-            Angular, and React. My expertise allows me to take ideas from
-            conception to completion — owning the entire development lifecycle,
-            from architecture and implementation to deployment.
-          </p>
-          <p className="my-6 text-justify  text-base sm:text-lg">
-            Over the years, I’ve worked across diverse domains including
-            job-tech, insurance, travel, and market research — consistently
-            delivering high-impact features and performance improvements. I’ve
-            led engineering teams, driven architectural revamps, and spearheaded
-            migrations from legacy systems to modern microservice-based
-            infrastructures.
-          </p>
+          {user.summary?.map((para, i) => (
+            <p key={i} className="my-6 text-justify text-base sm:text-lg">
+              {para}
+              {i === 2 && (
+                <>
+                  {" "}
+                  You can explore them&nbsp;
+                  <a
+                    href={user.github.url}
+                    className="text-blue-400 hover:underline inline-flex items-center gap-1"
+                  >
+                    {user.github.label} <GitHubLogoIcon />
+                  </a>
+                </>
+              )}
+            </p>
+          ))}
 
-          <div className="text-base sm:text-lg mb-2">
-            <span>Here’s what I bring to the table:</span>
-          </div>
+          {user.highlights && (
+            <div className="text-base sm:text-lg mb-2">
+              <span>Here’s what I bring to the table:</span>
+            </div>
+          )}
           <ul className="text-base sm:text-lg pl-5 sm:pl-10">
-            <li>
-              💡 A strong problem-solving mindset and ability to simplify
-              complexity into clean, maintainable code.{" "}
-            </li>
-            <li>
-              🤝 A collaborative approach to teamwork — I love mentoring, doing
-              code reviews, and sharing best practices.{" "}
-            </li>
-            <li>
-              🚀 An agile-first mindset — delivering iteratively with fast
-              feedback loops and test-driven development.{" "}
-            </li>
-            <li>
-              🧠 A growth-oriented attitude — constantly experimenting with new
-              tools, patterns, and practices.
-            </li>
+            {user.highlights?.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
-          <p className="my-6 text-justify  text-base sm:text-lg">
-            Beyond my day job, I enjoy exploring new tech and building small
-            tools, components, and utilities that solve real problems. Some of
-            these started as side projects for learning, and several are now
-            production-ready and used in real-world applications. You can
-            explore them&nbsp;
-            <a
-              href="https://github.com/onu-khatri"
-              className="text-blue-400 hover:underline inline-flex items-center gap-1"
-            >
-              GitHub account <GitHubLogoIcon />
-            </a>
-          </p>
 
-          <p className="text-justify  my-6 text-base sm:text-lg">
-            Whether you're a business owner looking to get started on a web or
-            app development project, a developer looking to collaborate on
-            something cool, or just wanting to say hi, shoot me a message and
-            let's work together.
-          </p>
+          {user.contactAppeal && (
+            <p className="text-justify my-6 text-base sm:text-lg">
+              {user.contactAppeal}
+            </p>
+          )}
 
-          <p className=" mt-6 mb-0 py-[8px] text-base sm:text-lg">
-            For more details on this part of my experience,{" "}
+          <p className="mt-6 mb-0 py-[8px] text-base sm:text-lg">
+            For more details on this part of my experience,&nbsp;
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="./docs/Anup-Singh-Resume.pdf"
+              href={user.resumeLink}
               className="text-blue-400 hover:underline"
             >
               see my CV.
@@ -92,34 +68,39 @@ export const AboutMe = () => {
           </p>
 
           <div className="flex gap-5 mt-1 items-center text-base sm:text-lg">
-            <div
-              itemScope
-              itemType="https://schema.org/email"
-              className="inline-block"
-            >
-              <a
-                itemProp="email"
-                href="mailto:onu.khatri@gmail.com"
-                className="inline-flex items-center gap-2 "
+            {user.contact?.email && (
+              <div
+                itemScope
+                itemType="https://schema.org/email"
+                className="inline-block"
               >
-                <EnvelopeClosedIcon />
-                <span>onu.khatri@gmail.com</span>
-              </a>
-            </div>
-            <div
-              itemScope
-              itemType="https://schema.org/telephone"
-              className="inline-block"
-            >
-              <a
-                itemProp="telephone"
-                href="tel:+918570000751"
-                className="inline-flex items-center gap-2 "
+                <a
+                  itemProp="email"
+                  href={`mailto:${user.contact.email}`}
+                  className="inline-flex items-center gap-2"
+                >
+                  <EnvelopeClosedIcon />
+                  <span>{user.contact.email}</span>
+                </a>
+              </div>
+            )}
+
+            {user.contact.phone && (
+              <div
+                itemScope
+                itemType="https://schema.org/telephone"
+                className="inline-block"
               >
-                <MobileIcon />
-                <span>+91-8570000751</span>
-              </a>
-            </div>
+                <a
+                  itemProp="telephone"
+                  href={`tel:${user.contact.phone}`}
+                  className="inline-flex items-center gap-2"
+                >
+                  <MobileIcon />
+                  <span>{user.contact.phone}</span>
+                </a>
+              </div>
+            )}
           </div>
 
           <div className="flex flex-wrap gap-8 text-darksalmon max-w-fit border-b border-current pb-1 mt-8">
