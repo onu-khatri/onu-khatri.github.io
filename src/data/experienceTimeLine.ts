@@ -3,8 +3,11 @@ export interface UserExperience {
   company: string;
   logo: string;
   date: string;
+  joiningDate: string;
+  lastJobDate?: string;
   description: (string | string[])[];
   contribution: string[];
+  experienceDuration?: string;
 }
 
 export const userExperiencesData: UserExperience[] = [
@@ -13,6 +16,7 @@ export const userExperiencesData: UserExperience[] = [
     company: "CareerBuilder.com, Noida",
     logo: "assets/icons/cb.png",
     date: "June 2020 - Current",
+    joiningDate: "2020-06-08 00:00:00",
     description: [
       "CareerBuilder is an employment website that operates in the United States and Europe. Here, We use data-driven technology and personalized tools to help match employers with great candidates based on individual wants, needs, and unique skill sets.",
       "We recently developed two new solutions: Pay Per Resume and Pay For Performance.",
@@ -34,6 +38,8 @@ export const userExperiencesData: UserExperience[] = [
     company: "Admiral Group Plc, InspopIndia.com Pvt. Ltd, Gurugram",
     logo: "assets/icons/admiral.png",
     date: "Nov 2015 - Jun 2020",
+    joiningDate: "2015-11-08 00:00:00",
+    lastJobDate: "2020-06-07 00:00:00",
     description: [
       "InspopIndia.com was a branch of Admiral Group Plc in India to provide the technical support for the Insurance based products like Rastreator. Rastreator.com is Spain’s most popular online insurance broker and price comparison platform. Rastreator.com Provide different comparison products for Car, Telephony, Travel, Energy and Finance.",
       "I developed new projects from scratch Like:",
@@ -56,6 +62,8 @@ export const userExperiencesData: UserExperience[] = [
     company: "E2E Research Pvt. Ltd, New Delhi",
     logo: "assets/icons/E2E.png",
     date: "Nov 2013 - Nov 2015",
+    joiningDate: "2013-11-08 00:00:00",
+    lastJobDate: "2015-11-07 00:00:00",
     description: [
       "Worked as a Junior Software developer on .Net platform and handled the top three revenue generating projects of organization. I Created survey based web-projects for Nickelodeon and The Guardian which show the comparison and statics between different brand of UK, US and Aus.",
     ],
