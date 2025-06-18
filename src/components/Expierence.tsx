@@ -50,7 +50,7 @@ export const ExperienceTimeline: React.FC<userExperience> = ({
               const timer = calculateTimer(t.joiningDate, t.lastJobDate);
               t.experienceDuration = `${timer.years} Yrs${
                 timer.months > 0
-                  ? " - " + timer.months + (timer.months > 1 ? " Mo" : " Mos")
+                  ? " - " + timer.months + (timer.months > 1 ? " Mos" : " Mo")
                   : ""
               }`;
 
