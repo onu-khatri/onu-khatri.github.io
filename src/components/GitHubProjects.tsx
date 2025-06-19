@@ -1,5 +1,6 @@
 import { CubeIcon } from "@radix-ui/react-icons";
 import type { GitCardProp } from "../data/githubProjects";
+import { H3Heading } from "./UI/Headings";
 
 export const GitCards = (props: GitCardProp) => {
   return (
@@ -10,10 +11,10 @@ export const GitCards = (props: GitCardProp) => {
         rel="noopener noreferrer"
         className="block p-6 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-2xl transition w-full h-full"
       >
-        <h3 className="flex items-center gap-3 border-b border-zinc-300 dark:border-zinc-700 pb-2 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+        <H3Heading className="flex text-lg items-center gap-3 border-b border-zinc-300 dark:border-zinc-700 pb-2 font-semibold text-zinc-800 dark:text-zinc-100 sm:text-xl">
           <CubeIcon className="w-6 h-6 text-primary" />
           {props.title}
-        </h3>
+        </H3Heading>
 
         <p className="text-zinc-600 dark:text-zinc-300 text-base sm:text-lg mt-4 mb-6 leading-relaxed text-justify">
           {props.description}

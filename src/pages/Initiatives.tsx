@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { GitCards } from "../components/GitHubProjects";
-import { H2Heading } from "../components/UI/H2Heading";
+import { H2Heading } from "../components/UI/Headings";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import type { GitCardProp } from "../data/githubProjects";
 

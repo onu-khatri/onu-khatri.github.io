@@ -1,4 +1,5 @@
 import { CalendarIcon, Link2Icon } from "@radix-ui/react-icons";
+import { H3Heading } from "./UI/Headings";
 
 interface MediumArticleType {
   title: string;
@@ -35,7 +36,7 @@ export const MediumArticle = ({ article }: { article: MediumArticleType }) => {
 
       {/* Middle: Title, tags, info */}
       <div className="md:col-span-4 flex flex-col gap-4 w-full">
-        <a
+        <H3Heading><a
           href={article.link}
           target="_blank"
           rel="noopener noreferrer"
@@ -43,7 +44,7 @@ export const MediumArticle = ({ article }: { article: MediumArticleType }) => {
         >
           {article.title}
           <Link2Icon className="w-4 h-4 opacity-70" />
-        </a>
+        </a></H3Heading>
 
         <div className="flex flex-wrap gap-2 text-base text-muted-foreground">
           {article.tags.map((tag, i) => (

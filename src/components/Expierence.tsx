@@ -1,7 +1,7 @@
 import { CalendarIcon, FigmaLogoIcon } from "@radix-ui/react-icons";
 import { Avatar } from "@radix-ui/react-avatar";
 import { ExperienceTimer } from "./ExperienceTimer";
-import { H2Heading } from "./UI/H2Heading";
+import { H2Heading, H3Heading, H4Heading, H5Heading } from "./UI/Headings";
 import { motion } from "framer-motion";
 import type { userExperience } from "../data/experienceTimeLine";
 import { calculateTimer } from "../utilities/calculateTimer";
@@ -71,9 +71,9 @@ export const ExperienceTimeline: React.FC<userExperience> = ({
                       />
                     </Avatar>
                     <div className="text-left">
-                      <h3 className="text-base sm:text-lg sm:text-xl font-semibold text-blue-700 dark:text-blue-400">
+                      <H3Heading className="text-base sm:text-lg sm:text-xl font-semibold text-blue-700 dark:text-blue-400">
                         {exp.title}
-                      </h3>
+                      </H3Heading>
                       <div className="flex justify-start sm:justify-start text-sm sm:text-base text-gray-500 dark:text-gray-300 mt-1">
                         <CalendarIcon className="mr-1 w-4 h-4" />
                         {exp.date}
@@ -87,9 +87,9 @@ export const ExperienceTimeline: React.FC<userExperience> = ({
                   </div>
 
                   {/* Company Name */}
-                  <h4 className="text-sm sm:text-base font-medium text-gray-700 dark:text-amber-100 mb-2 flex items-center">
+                  <H4Heading className="text-sm sm:text-base font-medium text-gray-700 dark:text-amber-100 mb-2 flex items-center">
                     <FigmaLogoIcon className="mr-2" /> {exp.company}
-                  </h4>
+                  </H4Heading>
 
                   {/* Description */}
                   <div className="text-gray-700 dark:text-gray-100 text-justify text-base sm:text-lg leading-relaxed space-y-2">
@@ -110,9 +110,9 @@ export const ExperienceTimeline: React.FC<userExperience> = ({
                   </div>
 
                   <div className="mt-8">
-                    <h4 className="text-gray-800 mb-2 text-base sm:text-lg font-semibold dark:text-amber-100">
+                    <H5Heading className="text-gray-800 mb-2 text-base sm:text-lg font-semibold dark:text-amber-100">
                       My Contribution:
-                    </h4>
+                    </H5Heading>
                     <ul className="ml-5 sm:ml-10 list-disc text-gray-700 dark:text-gray-100 text-justify text-base sm:text-lg leading-relaxed space-y-2">
                       {exp.contribution.map((para, i) => (
                         <li key={i}>{para}</li>

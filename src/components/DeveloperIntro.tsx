@@ -3,6 +3,7 @@ import * as Avatar from "@radix-ui/react-avatar";
 import { TypingList } from "./TypingList";
 import { DownloadIcon } from "@radix-ui/react-icons";
 import type { DeveloperIntroProps } from "../data/developerInfo";
+import { H1Heading } from "./UI/Headings";
 
 export const DeveloperIntro: React.FC<DeveloperIntroProps> = ({
   className,
@@ -28,9 +29,9 @@ export const DeveloperIntro: React.FC<DeveloperIntroProps> = ({
       </Avatar.Root>
 
       {/* Name */}
-      <h1 className="text-2xl sm:text-5xl font-bold text-foreground dark:text-foreground mt-4">
+      <H1Heading className="text-2xl sm:text-5xl font-bold text-foreground dark:text-foreground mt-4">
         {developer.name}
-      </h1>
+      </H1Heading>
 
       {/* Title */}
       <p className="text-base sm:text-base sm:text-lg mt-3 font-medium text-muted-foreground dark:text-muted-foreground">

@@ -1,6 +1,6 @@
 import { DesktopIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
-import { H2Heading } from "./UI/H2Heading";
+import { H2Heading, H3Heading } from "./UI/Headings";
 import type { SkillCategory } from "../data/skills";
 
 interface ToolkitProps {
@@ -29,8 +29,11 @@ export const Toolkit: React.FC<ToolkitProps> = ({ skills }) => {
             className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6"
           >
             {/* Group Name */}
-            <div className="w-36 shrink-0 text-neutral-700 dark:text-gray-200 text-base sm:text-lg font-semibold pt-2">
-              {group}:
+            <div className="w-36 shrink-0 pt-2 flex gap-1">
+              <H3Heading className="text-neutral-700 dark:text-gray-200 text-base sm:text-lg font-semibold">
+                {group}
+              </H3Heading>
+              :
             </div>
 
             {/* Skills Grid */}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { H2Heading } from "../components/UI/H2Heading";
+import { H2Heading } from "../components/UI/Headings";
 import type { Project } from "../data/projects";
 import { ProjectCard } from "../components/ProjectCard";
 

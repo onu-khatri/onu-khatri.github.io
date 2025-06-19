@@ -1,4 +1,5 @@
 import type { ContactInfo } from "../data/contactData";
+import { H3Heading } from "./UI/Headings";
 
 type ConactRowProps = {
   contactData: ContactInfo;
@@ -10,9 +11,9 @@ export const ContactRow: React.FC<ConactRowProps> = ({ contactData }) => (
       <contactData.icon className={`w-5 h-5 ${contactData.iconColorClass}`} />
     </div>
     <div>
-      <p className="text-sm text-zinc-500 dark:text-zinc-400">
+      <H3Heading className="text-sm sm:text-base text-zinc-500 dark:text-zinc-400">
         {contactData.label}
-      </p>
+      </H3Heading>
       <a
         href={contactData.link}
         target="_blank"

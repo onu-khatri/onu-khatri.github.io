@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ContactRow } from "../components/contact";
 import type { ContactSectionContent } from "../data/contactData";
+import { H2Heading } from "../components/UI/Headings";
 
 type contactProps = {
   contactData: ContactSectionContent;
@@ -15,9 +16,9 @@ export const Contact: React.FC<contactProps> = ({ contactData }) => (
     className="px-4 py-20 scroll-mt-12"
   >
     <div className="max-w-5xl mx-auto text-center">
-      <h2 className="text-4xl font-bold text-zinc-900 dark:text-white mb-3">
+      <H2Heading className="text-4xl font-bold text-zinc-900 dark:text-white mb-3 text-center md:text-center">
         {contactData.heading}
-      </h2>
+      </H2Heading>
       <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 mb-12">
         {contactData.subheading}
       </p>

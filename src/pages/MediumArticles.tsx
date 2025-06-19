@@ -1,6 +1,6 @@
 import { ReaderIcon } from "@radix-ui/react-icons";
 import { MediumArticle } from "../components/MediumArticle";
-import { H2Heading } from "../components/UI/H2Heading";
+import { H2Heading } from "../components/UI/Headings";
 import { motion } from "framer-motion";
 import type { ArticleData } from "../data/articles";
 

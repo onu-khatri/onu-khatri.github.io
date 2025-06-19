@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as Avatar from "@radix-ui/react-avatar";
 import * as Accordion from "@radix-ui/react-accordion";
+import { H3Heading, H4Heading } from "./UI/Headings";
 
 interface ProjectCardProps {
   title: string;
@@ -41,7 +42,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     <div className="mt-2 text-base text-neutral-800 dark:text-neutral-200 p-4">
       {isFlip && (
         <div className="mb-3">
-          <h3 className="text-2xl">{title}</h3>
+          <H3Heading className="text-2xl">{title}</H3Heading>
           <hr className="w-3/4 border-t border-gray-300 dark:border-gray-700" />
         </div>
       )}
@@ -54,7 +55,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </ul>
       )}
 
-      <h4 className="text-xl font-semibold mb-2 mt-5">My Role:</h4>
+      <H4Heading className="text-xl font-semibold mb-2 mt-5">
+        My Role:
+      </H4Heading>
       <ul className="list-disc list-inside space-y-1">
         {responsibilities.map((item, idx) => (
           <li key={idx}>{item}</li>
@@ -91,12 +94,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <img
             src={imageSrc}
             alt={title}
-            className="w-full h-auto object-cover rounded-lg mb-4 shadow-2xs border-b dark:border-neutral-700"
+            className="w-full h-auto min-h-[175px] object-cover rounded-lg mb-4 shadow-2xs border-b dark:border-neutral-700"
           />
           <div className="px-4">
-            <h3 className="text-2xl font-bold mb-2 text-neutral-900 dark:text-amber-50">
+            <H3Heading className="text-xl sm:text-2xl font-bold mb-2 text-neutral-900 dark:text-amber-50">
               {title}
-            </h3>
+            </H3Heading>
             <p className="text-base text-neutral-700 dark:text-neutral-200 mb-1 min-h-[8rem]">
               {description}
             </p>
@@ -167,9 +170,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             className="w-full object-cover rounded-lg mb-4 shadow-2xs border-b dark:border-neutral-700"
           />
 
-          <h3 className="text-2xl font-bold mb-2 text-neutral-900 dark:text-amber-50">
+          <H3Heading className="text-2xl font-bold mb-2 text-neutral-900 dark:text-amber-50">
             {title}
-          </h3>
+          </H3Heading>
 
           <p className="text-base sm:text-lg text-neutral-700 dark:text-neutral-200 mb-4">
             {description}

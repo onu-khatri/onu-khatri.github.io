@@ -3,7 +3,7 @@ import {
   GitHubLogoIcon,
   MobileIcon,
 } from "@radix-ui/react-icons";
-import { H2Heading } from "./UI/H2Heading";
+import { H2Heading, H3Heading } from "./UI/Headings";
 import { motion } from "framer-motion";
 import type { AboutMeProps } from "../data/userInfo";
 
@@ -104,7 +104,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({ user }) => {
           </div>
 
           <div className="flex flex-wrap gap-8 text-darksalmon max-w-fit border-b border-current pb-1 mt-8">
-            <h3 className="font-medium text-xl align-middle">Hobbies:</h3>
+            <H3Heading className="font-medium text-xl align-middle">Hobbies:</H3Heading>
             <div className="flex flex-wrap gap-7">
               <svg
                 className="w-[2rem] text-amber-800 dark:text-amber-500"
